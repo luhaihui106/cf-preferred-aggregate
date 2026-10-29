@@ -1,13 +1,13 @@
 {
   "adapter_count": 6,
-  "attempted_at": "2026-10-29T14:15:52Z",
+  "attempted_at": "2026-10-29T14:16:34Z",
   "candidate_counts": {
     "all-v4": 27,
     "all-v6": 68
   },
   "candidate_usable": true,
   "cloudflare_ranges": {
-    "fetched_at": "2026-10-29T14:15:52Z",
+    "fetched_at": "2026-10-29T14:16:34Z",
     "networks": {
       "4": [
         "173.245.48.0/20",
@@ -39,7 +39,7 @@
     "state": "fresh"
   },
   "collection_ok": true,
-  "completed_at": "2026-10-29T14:15:56Z",
+  "completed_at": "2026-10-29T14:16:36Z",
   "contributing_provider_count": 3,
   "counts": {
     "all-v4": 0,
@@ -53,8 +53,8 @@
     "general-v4": 0,
     "general-v6": 0
   },
-  "dataset_generated_at": "2026-10-29T14:15:56Z",
-  "dataset_valid_until": "2026-10-30T14:15:53Z",
+  "dataset_generated_at": "2026-10-29T14:16:36Z",
+  "dataset_valid_until": "2026-10-30T14:16:35Z",
   "excluded_records": 95,
   "exclusion_reasons": {
     "invalid_packet_evidence": 85,
@@ -72,7 +72,7 @@
     "all-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "candidates-v4.txt": "cb741a031196fabd2dd8cda0a63b4bd2dba4226f972822513133a42ada7c0e35",
     "candidates-v6.txt": "a1c979d95609276df141a2f04c1ded00d437d12d376e5d07ce48492134623539",
-    "candidates.json": "1321bc8514e649a83ed799478905bf72874107b109d58cdeb7d8298390fb3cdb",
+    "candidates.json": "81666e5e5d14ddb8f3483c3a589c258a7b78f3f75e5d852aece9068e41cef1ed",
     "cmcc-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ct-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -81,12 +81,12 @@
     "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "general-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "general-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "last-good-candidates.json": "1321bc8514e649a83ed799478905bf72874107b109d58cdeb7d8298390fb3cdb",
+    "last-good-candidates.json": "81666e5e5d14ddb8f3483c3a589c258a7b78f3f75e5d852aece9068e41cef1ed",
     "policy.json": "9e1461947002ca05d2b852c9fbea15548a4d48a8745b070b2b0f3f21a86b1960",
     "recommended-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "recommended-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "records.json": "5048a404824c8c93c79d3e310695d0f918a26a25a26073faf21d3b1993a8b128",
-    "sources.json": "37f596206224e49689075de38bfc791ae74be13067649f867df28644c9101f51"
+    "records.json": "328d10419446ca4cf95aeea35e74b2e24dcf672480156b70dd289c93cbdc7802",
+    "sources.json": "32cbd36dd23a75c75a663ebfb22a34aa6587523d36ebf07589b1b58c3ab67ff5"
   },
   "fresh_provider_count": 3,
   "observation_exclusion_reasons": {
@@ -109,7 +109,7 @@
   "sources": {
     "cf-speed-dns-v4": {
       "accepted_rows": 1,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "general",
       "exclusion_reasons": {
         "invalid_packet_evidence": 1,
@@ -121,7 +121,7 @@
         "unknown_speed_unit": 1
       },
       "family": 4,
-      "fetched_at": "2026-10-29T14:15:54Z",
+      "fetched_at": "2026-10-29T14:16:35Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 1,
       "kind": "published_preferred_shortlist",
@@ -143,7 +143,7 @@
     },
     "cmliussss-cmcc": {
       "accepted_rows": 8,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "cmcc",
       "exclusion_reasons": {
         "invalid_packet_evidence": 8,
@@ -155,7 +155,7 @@
         "unknown_speed_unit": 8
       },
       "family": 4,
-      "fetched_at": "2026-10-29T14:15:55Z",
+      "fetched_at": "2026-10-29T14:16:36Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -177,7 +177,7 @@
     },
     "cmliussss-ct": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "ct",
       "exclusion_reasons": {
         "invalid_packet_evidence": 4,
@@ -189,7 +189,7 @@
         "unknown_speed_unit": 4
       },
       "family": 4,
-      "fetched_at": "2026-10-29T14:15:56Z",
+      "fetched_at": "2026-10-29T14:16:36Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",
@@ -211,7 +211,7 @@
     },
     "cmliussss-cu": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "cu",
       "exclusion_reasons": {
         "invalid_packet_evidence": 4,
@@ -223,7 +223,7 @@
         "unknown_speed_unit": 4
       },
       "family": 4,
-      "fetched_at": "2026-10-29T14:15:56Z",
+      "fetched_at": "2026-10-29T14:16:36Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -245,14 +245,14 @@
     },
     "ipdb-v4": {
       "accepted_rows": 10,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "general",
       "exclusion_reasons": {
         "unknown_measurement_time": 10,
         "unknown_probe_viewpoint": 10
       },
       "family": 4,
-      "fetched_at": "2026-10-29T14:15:53Z",
+      "fetched_at": "2026-10-29T14:16:35Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
@@ -284,7 +284,7 @@
     },
     "ipdb-v6": {
       "accepted_rows": 68,
-      "attempted_at": "2026-10-29T14:15:52Z",
+      "attempted_at": "2026-10-29T14:16:34Z",
       "carrier": "general",
       "exclusion_reasons": {
         "invalid_packet_evidence": 68,
@@ -294,7 +294,7 @@
         "zero_speed": 68
       },
       "family": 6,
-      "fetched_at": "2026-10-29T14:15:53Z",
+      "fetched_at": "2026-10-29T14:16:35Z",
       "id": "ipdb-v6",
       "input_rows": 68,
       "kind": "published_metric_table_with_shortlist",
