@@ -1,6 +1,6 @@
 {
   "adapter_count": 6,
-  "attempted_at": "2026-10-29T15:45:36Z",
+  "attempted_at": "2026-10-29T15:48:15Z",
   "candidate_counts": {
     "all-v4": 28,
     "all-v6": 16
@@ -15,7 +15,7 @@
     "version": "source-claimed-v1"
   },
   "cloudflare_ranges": {
-    "fetched_at": "2026-10-29T15:45:36Z",
+    "fetched_at": "2026-10-29T15:48:15Z",
     "networks": {
       "4": [
         "173.245.48.0/20",
@@ -47,7 +47,7 @@
     "state": "fresh"
   },
   "collection_ok": true,
-  "completed_at": "2026-10-29T15:45:38Z",
+  "completed_at": "2026-10-29T15:48:18Z",
   "contributing_provider_count": 3,
   "counts": {
     "all-v4": 19,
@@ -61,8 +61,8 @@
     "general-v4": 3,
     "general-v6": 0
   },
-  "dataset_generated_at": "2026-10-29T15:45:38Z",
-  "dataset_valid_until": "2026-10-30T15:45:37Z",
+  "dataset_generated_at": "2026-10-29T15:48:18Z",
+  "dataset_valid_until": "2026-10-30T15:48:16Z",
   "excluded_records": 25,
   "exclusion_reasons": {
     "invalid_packet_evidence": 25,
@@ -75,7 +75,7 @@
     "all-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "candidates-v4.txt": "9eea351003c8746d32c934778897c06bc4fc120900d86441f8c7ab9d575403fb",
     "candidates-v6.txt": "1c6d69a85c6eb8892ff51a942b6cf45a700e1f8081c0282c8dbc5b817edc6a2a",
-    "candidates.json": "403e1712e70f60f0eb9a0344807c032d4d145644947ea8035c81e7db2c3cf91c",
+    "candidates.json": "904b1f9cb2fe78d11312246c11236faa9912c42c81dcb65544efb13948ed1ac6",
     "cmcc-v4.txt": "2cd76fbdc91926ab72daebfdb1fa9e1e54ff0216f3bdd6aa33d95f9ae8862431",
     "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ct-v4.txt": "742a39b7837037615bca71ae54e3788bfe02f87c4ad23ee366ddf71b7bdb6016",
@@ -84,12 +84,12 @@
     "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "general-v4.txt": "9443905ed9b94bb880d94efed36a85202622914ead56ebb2c139c8bcd922c3a8",
     "general-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "last-good-candidates.json": "403e1712e70f60f0eb9a0344807c032d4d145644947ea8035c81e7db2c3cf91c",
+    "last-good-candidates.json": "904b1f9cb2fe78d11312246c11236faa9912c42c81dcb65544efb13948ed1ac6",
     "policy.json": "7352a7c944030c92ff0c6497634b4d6ac45b65e0722a41beaab10417cf15bf91",
     "recommended-v4.txt": "22cab8f2235b2d64b9a47671f71941447c8ffee2ee064b3199a42febad134f44",
     "recommended-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "records.json": "dd83361f9894ce5b20a42f3f20900adca7269d348fd477b65d1a5e78d3975946",
-    "sources.json": "eb0c42b679e890e7887a4ecc1c9b950a4cde16de40c9da3c13b12c533ccf432b"
+    "records.json": "51baf7c3fd39c00bad2bf7a8a47f23dd8c8b1e6127768ebf76e7c2098ce141ed",
+    "sources.json": "21fbdbe4c0b10d9cb12ecaf34d72ca2f3254aace720744a3e2bd4b75d6ccd7cb"
   },
   "fresh_provider_count": 3,
   "independently_verified_records": 0,
@@ -113,18 +113,18 @@
     "unknown_speed": 18
   },
   "recommendation_state": "upstream-preferred",
-  "recommendation_valid_until": "2026-10-30T15:45:37Z",
+  "recommendation_valid_until": "2026-10-30T15:48:16Z",
   "recommended_provider_count": 3,
   "schema_version": 3,
   "sources": {
     "cf-speed-dns-v4": {
       "accepted_rows": 2,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "general",
       "default_eligible_records": 2,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:45:38Z",
+      "fetched_at": "2026-10-29T15:48:16Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 2,
       "kind": "published_preferred_shortlist",
@@ -155,12 +155,12 @@
     },
     "cmliussss-cmcc": {
       "accepted_rows": 8,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "cmcc",
       "default_eligible_records": 8,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:45:38Z",
+      "fetched_at": "2026-10-29T15:48:17Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -191,12 +191,12 @@
     },
     "cmliussss-ct": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "ct",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:45:38Z",
+      "fetched_at": "2026-10-29T15:48:18Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",
@@ -227,12 +227,12 @@
     },
     "cmliussss-cu": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "cu",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:45:38Z",
+      "fetched_at": "2026-10-29T15:48:17Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -263,7 +263,7 @@
     },
     "ipdb-v4": {
       "accepted_rows": 10,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "general",
       "default_eligible_records": 1,
       "exclusion_reasons": {
@@ -271,7 +271,7 @@
         "positive_loss": 9
       },
       "family": 4,
-      "fetched_at": "2026-10-29T15:45:37Z",
+      "fetched_at": "2026-10-29T15:48:16Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
@@ -307,7 +307,7 @@
     },
     "ipdb-v6": {
       "accepted_rows": 16,
-      "attempted_at": "2026-10-29T15:45:36Z",
+      "attempted_at": "2026-10-29T15:48:15Z",
       "carrier": "general",
       "default_eligible_records": 0,
       "exclusion_reasons": {
@@ -316,7 +316,7 @@
         "zero_speed": 16
       },
       "family": 6,
-      "fetched_at": "2026-10-29T15:45:37Z",
+      "fetched_at": "2026-10-29T15:48:16Z",
       "id": "ipdb-v6",
       "input_rows": 16,
       "kind": "published_metric_table_with_shortlist",
