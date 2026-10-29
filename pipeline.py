@@ -86,7 +86,7 @@ def summarize_quality(rows):
         unknown_loss_rows=sum(v is None for v in loss),
         zero_download_rows=sum(v==0 for v in speed),
         unknown_download_rows=sum(v is None for v in speed),
-        policy='descriptive candidate counts; recommendations gated separately by strict-evidence-v1')
+        policy='descriptive candidate counts; default gated by upstream-preferred-v1')
 
 
 def generate(out,now=None,fetch=fetch_text):
@@ -221,7 +221,7 @@ def publish(out,status,records,now,new_dataset):
     """Separate current recommendations from retained forensic candidates."""
     from collections import Counter
 
-    status['schema_version']=2
+    status['schema_version']=3
     status['policy_version']=POLICY['version']
     status['completed_at']=now
     status['collection_ok']=new_dataset
@@ -233,15 +233,21 @@ def publish(out,status,records,now,new_dataset):
             r['quality']['reasons']=sorted(set(r['quality']['reasons']+['collection_unavailable']))
     recommended=[r for r in records if r['quality']['eligible']]
     status['usable']=bool(recommended)
-    status['recommendation_state']=('healthy' if status['state']=='fresh' else 'degraded') if recommended else (
+    status['recommendation_state']=('upstream-preferred' if status['state']=='fresh' else 'degraded') if recommended else (
         'expired' if status['state'] in ('expired','range_changed') else 'degraded' if not new_dataset or status['state']!='fresh' else 'empty')
     status['candidate_counts']={};status['counts']={};status['file_sha256']={}
     status['excluded_records']=len(records)-len(recommended)
     status['exclusion_reasons']=dict(sorted(Counter(reason for r in records if not r['quality']['eligible'] for reason in r['quality']['reasons']).items()))
     status['observation_exclusion_reasons']=dict(sorted(Counter(reason for r in records for p in r['provenance'] for reason in p['quality']['reasons']).items()))
+    status['quality_warnings']=dict(sorted(Counter(warning for r in records for warning in r['quality']['warnings']).items()))
+    status['quality_level']='upstream-preferred/unverified'
+    status['independently_verified_records']=0
+    status['recommended_provider_count']=len({p['provider_id'] for r in recommended for p in r['provenance'] if p['quality']['eligible'] and p.get('provider_id')})
     for sid,source in status['sources'].items():
         observations=[p for r in records for p in r['provenance'] if p['source_id']==sid]
         source['recommended_observations']=sum(p['quality']['eligible'] for p in observations) if new_dataset else 0
+        source['default_eligible_records']=sum(r['quality']['eligible'] and any(p['source_id']==sid and p['quality']['eligible'] for p in r['provenance']) for r in records) if new_dataset else 0
+        source['quality_warnings']=dict(sorted(Counter(w for p in observations for w in p['quality']['warnings']).items()))
         source['exclusion_reasons']=dict(sorted(Counter(reason for p in observations for reason in p['quality']['reasons']).items()))
     def write_txt(name,selected):
         text=''.join((r['address'] if r['port'] is None else
@@ -257,7 +263,7 @@ def publish(out,status,records,now,new_dataset):
             write_txt(name,selected)
             status['counts'][name]=len(selected)
         write_txt(f'recommended-v{family}',[r for r in recommended if r['family']==family])
-    envelope=dict(schema_version=2,policy_version=POLICY['version'],generated_at=now,
+    envelope=dict(schema_version=3,policy_version=POLICY['version'],generated_at=now,
         valid_until=status.get('dataset_valid_until'),ordering='catalogue round-robin; original source ranks',records=records)
     dump(out/'candidates.json',envelope)
     if new_dataset and status['state']=='fresh': dump(out/'last-good-candidates.json',envelope)
@@ -265,12 +271,14 @@ def publish(out,status,records,now,new_dataset):
     deadlines=[timestamp(now)+dt.timedelta(seconds=STALE_SECONDS)]
     for r in recommended:
         for p in r['provenance']:
-            deadlines.extend([timestamp(p['fetched_at'])+dt.timedelta(seconds=POLICY['fetch_max_seconds']),
-                              timestamp(p['measurement_time'])+dt.timedelta(seconds=POLICY['measurement_max_seconds'])])
+            deadlines.append(timestamp(p['fetched_at'])+dt.timedelta(seconds=POLICY['fetch_max_seconds']))
+            if p.get('measurement_time') is not None:
+                deadlines.append(timestamp(p['measurement_time'])+dt.timedelta(seconds=POLICY['measurement_max_seconds']))
+            if p.get('valid_until') is not None: deadlines.append(timestamp(p['valid_until']))
     status['recommendation_valid_until']=min(deadlines).isoformat(timespec='seconds').replace('+00:00','Z') if recommended else None
     dump(out/'records.json',{**envelope,'valid_until':status['recommendation_valid_until'],'records':recommended})
     dump(out/'policy.json',POLICY)
-    dump(out/'sources.json',dict(schema_version=2,attempted_at=status['attempted_at'],sources=list(status['sources'].values())))
+    dump(out/'sources.json',dict(schema_version=3,attempted_at=status['attempted_at'],sources=list(status['sources'].values())))
     for path in sorted(out.iterdir()):
         if path.suffix in ('.json','.txt') and path.name!='status.json':
             status['file_sha256'][path.name]=hashlib.sha256(path.read_bytes()).hexdigest()

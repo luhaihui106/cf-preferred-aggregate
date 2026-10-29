@@ -54,7 +54,7 @@ class SourceTests(unittest.TestCase):
             self.assertEqual(s['fresh_provider_count'],3)
             self.assertEqual(s['adapter_count'],6)
             self.assertEqual(s['candidate_counts']['all-v4'],4)
-            self.assertEqual(s['counts']['all-v4'],0)
+            self.assertEqual(s['counts']['all-v4'],3)
             self.assertEqual(s['counts']['cmcc-v4'],0)
             self.assertEqual(s['sources']['ipdb-v4']['input_rows'],2)
             self.assertEqual(s['sources']['ipdb-v4']['preferred_rows'],1)

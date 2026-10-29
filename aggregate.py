@@ -41,7 +41,7 @@ def parse_ip_list(text, separator='lines', claim='general', limit=20):
         ipaddress.ip_address(address)  # Fail closed on HTML, domains and ports.
         rows.append(dict(address=address,port=None,rank=rank,carrier_claim=claim,
             carrier_verified=False,measurement_time=None,probe_viewpoint=None,
-            metrics={},upstream_label=label.strip() if sep else None))
+            metrics={},upstream_preferred=True,upstream_label=label.strip() if sep else None))
     return rows
 
 
@@ -86,8 +86,10 @@ def collect_ipdb(csv_text, shortlist_text, family):
         try: key=str(ipaddress.ip_address(row['address']))
         except ValueError: key=row['address']
         row['shortlist_rank']=ranks.get(key)
-        row['selection']='full published CSV; shortlist annotation only'
-    return rows
+        row['upstream_preferred']=key in ranks
+        row['selection']='published bestcf shortlist matched to CSV; other rows candidate only'
+    # Preferred source ordering is shortlist rank, not the metric-table order.
+    return sorted(rows,key=lambda r:(r['shortlist_rank'] is None,r['shortlist_rank'] or r['csv_rank'],r['csv_rank']))
 
 
 def parse_ranges(text, family):

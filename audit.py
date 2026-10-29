@@ -44,7 +44,7 @@ def check_data(root):
             if timestamp(status['dataset_valid_until']) < timestamp(status.get('completed_at',status['attempted_at'])):
                 raise ValueError('usable expired dataset')
         if r['category']!='general': raise ValueError('unsupported carrier category')
-    if status.get('schema_version')==2:
+    if status.get('schema_version') in (2,3):
         from quality import evaluate, POLICY
         candidates=json.loads((root/'candidates.json').read_text())['records']
         if status['policy_version']!=POLICY['version']: raise ValueError('policy mismatch')
@@ -81,7 +81,7 @@ def check_data(root):
             from pipeline import timestamp
             deadlines=[timestamp(p[key])+__import__('datetime').timedelta(seconds=POLICY[limit])
                 for r in records for p in r['provenance'] for key,limit in
-                [('fetched_at','fetch_max_seconds'),('measurement_time','measurement_max_seconds')]]
+                [('fetched_at','fetch_max_seconds'),('measurement_time','measurement_max_seconds')] if p.get(key) is not None]
             if timestamp(status['recommendation_valid_until'])>min(deadlines): raise ValueError('extended recommendation expiry')
         reasons=dict(Counter(reason for r in candidates if not r['quality']['eligible'] for reason in r['quality']['reasons']))
         if reasons!=status['exclusion_reasons'] or status['excluded_records']!=len(candidates)-len(records):

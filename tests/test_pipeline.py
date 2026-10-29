@@ -34,7 +34,7 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(s['candidate_counts']['all-v4'],1)
             self.assertEqual(s['candidate_counts']['all-v6'],1)
             self.assertTrue(s['candidate_usable'])
-            self.assertFalse(s['usable'])
+            self.assertTrue(s['usable'])  # Published shortlist, unknown context is warning.
             self.assertEqual(s['sources']['ipdb-v4']['input_rows'],3)
             self.assertEqual(s['sources']['ipdb-v4']['preferred_rows'],1)
             self.assertEqual(s['counts']['cmcc-v4'],0)

@@ -39,7 +39,8 @@ class ReviewRegressions(unittest.TestCase):
             s=pipeline.generate(d,now='2026-10-29T13:00:00Z',fetch=fetcher(narrow=True,fail=True))
             self.assertFalse(s['usable'])
             self.assertEqual(s['state'],'range_changed')
-            self.assertEqual((Path(d)/'all-v4.txt').read_bytes(),before)
+            self.assertTrue(before)
+            self.assertEqual((Path(d)/'all-v4.txt').read_bytes(),b'')
             audit.check_data(Path(d))
     def test_partial_stale_expires_during_fetch(self):
         with tempfile.TemporaryDirectory() as d:
@@ -49,7 +50,7 @@ class ReviewRegressions(unittest.TestCase):
                 '2026-10-30T12:00:04Z']):
                 s=f.run_case(d,fail=(4,),now=None)
             self.assertTrue(s['candidate_usable'])
-            self.assertFalse(s['usable'])
+            self.assertTrue(s['usable'])  # Fresh IPv6 survives; expired IPv4 does not.
             self.assertEqual(s['sources']['ipdb-v4']['state'],'expired')
             self.assertEqual(s['counts']['all-v4'],0)
             self.assertGreater(s['dataset_valid_until'],s['dataset_generated_at'])

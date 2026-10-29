@@ -67,6 +67,10 @@ https://byoip.top/ 此轮无重定向自动跟随 GET 遇到重定向（并非�
 
 未启用。已有 IPv6 跨运营商同地址/指标/时间与 NETCUP 重复观察，不足以建立独立国内三网归因；本任务没有把它重新计作三网测量提供方。
 
+## schema v3 默认政策修正（取代上文 v2 的严格默认准入描述）
+
+IPDB 完整 CSV 只作为显式候选保存；默认仅 bestcfv4/bestcfv6 同提交匹配的名单。CMLiussss 及 cf-speed-dns 文档最小优选接口仍启用，来源范围和使用决定未扩大。未知测量时间、测点、缺失指标保留警告，不单独阻断优选；已知正丢包、零速度、非法指标或过期继续排除。level=upstream-preferred/unverified 不是独立验证。冲突明确失败否决，不择优。当前完整规则以 QUALITY-POLICY.md 为准；上文历史样本数量不是当前承诺。
+
 ## 计数和范围边界
 
 默认配置 3 个原始提供方、6 个适配器；提供方并不等于经独立核验的测量基础设施。两个 IPDB 地址族及 CML 三类均不可膨胀为独立测点数，额外来源仍可能共享未公开的更上游。逐条 provenance 保留 provider_id、source_id、origin、endpoint_url、rank、指标及未知项；重合仅算一个地址+端口，不用跨测点指标排序。

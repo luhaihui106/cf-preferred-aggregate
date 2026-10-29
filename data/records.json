@@ -1,8 +1,1156 @@
 {
-  "generated_at": "2026-10-29T14:16:36Z",
+  "generated_at": "2026-10-29T15:29:56Z",
   "ordering": "catalogue round-robin; original source ranks",
-  "policy_version": "strict-evidence-v1",
-  "records": [],
-  "schema_version": 2,
-  "valid_until": null
+  "policy_version": "upstream-preferred-v1",
+  "records": [
+    {
+      "address": "172.64.147.250",
+      "carrier_claims": [],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.64.147.250",
+          "carrier_claim": "general",
+          "carrier_verified": false,
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cf-speed-dns",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 1,
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.17.22.231",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.17.22.231",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 1,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.26.11.140",
+      "carrier_claims": [
+        "cu"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.26.11.140",
+          "carrier_claim": "cu",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cu",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 1,
+          "source_id": "cmliussss-cu",
+          "source_revision": null,
+          "upstream_label": "CF 联通优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "172.66.0.172",
+      "carrier_claims": [
+        "ct"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.66.0.172",
+          "carrier_claim": "ct",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/ct",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 1,
+          "source_id": "cmliussss-ct",
+          "source_revision": null,
+          "upstream_label": "CF 电信优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.18.35.206",
+      "carrier_claims": [],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.18.35.206",
+          "carrier_claim": "general",
+          "carrier_verified": false,
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cf-speed-dns",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 2,
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.17.125.98",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.17.125.98",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 2,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.26.14.111",
+      "carrier_claims": [
+        "cu"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.26.14.111",
+          "carrier_claim": "cu",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cu",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 2,
+          "source_id": "cmliussss-cu",
+          "source_revision": null,
+          "upstream_label": "CF 联通优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "172.66.0.118",
+      "carrier_claims": [
+        "ct"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.66.0.118",
+          "carrier_claim": "ct",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/ct",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 2,
+          "source_id": "cmliussss-ct",
+          "source_revision": null,
+          "upstream_label": "CF 电信优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.16.240.177",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.16.240.177",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 3,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "172.67.74.177",
+      "carrier_claims": [
+        "cu"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.67.74.177",
+          "carrier_claim": "cu",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cu",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 3,
+          "source_id": "cmliussss-cu",
+          "source_revision": null,
+          "upstream_label": "CF 联通优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "172.66.1.250",
+      "carrier_claims": [
+        "ct"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.66.1.250",
+          "carrier_claim": "ct",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/ct",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 3,
+          "source_id": "cmliussss-ct",
+          "source_revision": null,
+          "upstream_label": "CF 电信优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.19.34.37",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.19.34.37",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 4,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "172.67.67.89",
+      "carrier_claims": [
+        "cu"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "172.67.67.89",
+          "carrier_claim": "cu",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cu",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 4,
+          "source_id": "cmliussss-cu",
+          "source_revision": null,
+          "upstream_label": "CF 联通优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.17.145.145",
+      "carrier_claims": [
+        "ct"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.17.145.145",
+          "carrier_claim": "ct",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/ct",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 6,
+          "source_id": "cmliussss-ct",
+          "source_revision": null,
+          "upstream_label": "CF 电信优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.17.187.57",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.17.187.57",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 5,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.19.149.171",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.19.149.171",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 6,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.17.145.43",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.17.145.43",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 7,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "103.31.4.169",
+      "carrier_claims": [],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "103.31.4.169",
+          "carrier_claim": "general",
+          "carrier_verified": false,
+          "csv_rank": 8,
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/8f67ca7add587ab08526803b1510cc33ac971e0c/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-10-29T15:29:55Z",
+          "measurement_time": null,
+          "metrics": {
+            "download_speed": {
+              "unit": "MB/s",
+              "value": "2.36"
+            },
+            "latency": {
+              "unit": null,
+              "value": "268.72"
+            },
+            "loss": {
+              "unit": "ratio",
+              "value": "0.00"
+            },
+            "received": {
+              "unit": "packets",
+              "value": "4"
+            },
+            "sent": {
+              "unit": "packets",
+              "value": "4"
+            }
+          },
+          "origin": "https://github.com/ymyuuu/IPDB",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "ipdb",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint"
+            ]
+          },
+          "rank": 8,
+          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
+          "shortlist_rank": 8,
+          "source_id": "ipdb-v4",
+          "source_revision": "8f67ca7add587ab08526803b1510cc33ac971e0c",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint"
+        ]
+      }
+    },
+    {
+      "address": "104.18.33.121",
+      "carrier_claims": [
+        "cmcc"
+      ],
+      "carrier_conflict": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.18.33.121",
+          "carrier_claim": "cmcc",
+          "carrier_verified": false,
+          "endpoint_url": "https://cf.090227.xyz/cmcc",
+          "fetched_at": "2026-10-29T15:29:56Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://cf.090227.xyz/",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cmliussss",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 8,
+          "source_id": "cmliussss-cmcc",
+          "source_revision": null,
+          "upstream_label": "CF 移动优选",
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    }
+  ],
+  "schema_version": 3,
+  "valid_until": "2026-10-30T15:29:55Z"
 }

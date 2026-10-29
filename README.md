@@ -1,14 +1,14 @@
-# CF 公开候选与严格推荐
+# CF 公开优选结果聚合
 
-轻量聚合公开结果：校验 Cloudflare 官方网段，保留来源、排名、指标，区分完整候选和严格推荐。只用 Python 标准库，不测速、不扫描、不生成代理订阅，不改现有 Pages 或服务器。
+轻量聚合上游已发布优选结果，剔除已知坏结果，保留来源、排名、指标与未知项，区分默认优选和完整候选。只用 Python 标准库，不测速、不扫描、不生成代理订阅，不改现有 Pages 或服务器。
 
-## 宁缺毋滥：v2 消费语义变更
+## 默认政策修正：schema v3
 
-旧版 all/general TXT 和 records.json 只是地址合法的候选。schema_version=2 起，它们只输出通过 strict-evidence-v1 的推荐；完整候选移到明确的 candidates 文件。默认推荐可能全部为空，不回退、不凑数。旧消费者需要明确选择推荐或候选，不能假定旧文件仍有原数量。
+默认 recommended/all/general TXT 和 records.json 使用 upstream-preferred-v1：仅上游公开优选名单且无已知质量排除项。完整候选仍在 candidates 文件。取代 schema v2 的 strict-evidence-v1：未知测点、测量时间或缺失指标改为明确警告，不单独阻断上游优选资格。所有当前结果标为 upstream-preferred/unverified，不是独立代理健康验证。
 
-推荐最低证据：零丢包且有一致的包计数、正且有限的 MB/s 下载速度、24 小时内真实测量时间、可归因的测点/网络背景、本轮成功抓取且未过期。缺失、未知、非有限、负数、正丢包、零速度、陈旧或来源失败分别记录原因。同端点所有观察必须通过，不择优掩盖冲突，不把镜像计成独立测量。不要求明确城市，但需要可信测点背景；不设全球统一速度/延迟门槛。完整规则与状态定义见 [QUALITY-POLICY.md](QUALITY-POLICY.md)。
+已知正丢包、零速度、非法/非有限指标、已知过期、来源失败仍排除；缺失指标保持未知而不是零。所有观察的明确失败均可否决端点，不择优掩盖冲突，不把镜像计成独立测量。至少一条观察须来自实际优选名单，不能从完整 CSV 或通用池补数。不设全球统一速度/延迟门槛。完整规则见 [QUALITY-POLICY.md](QUALITY-POLICY.md)。
 
-当前准入/排除数以 [实时 status.json](https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/status.json) 为准：candidate_counts 为候选数，counts 为推荐数，excluded_records 与 exclusion_reasons 提供排除数量和原因（原因可以重叠）。现有来源未提供逐行真实测量时间及测点归因，按此策略不能称为测量健康；零推荐是正常失败关闭，不是靠候选补齐的理由。
+当前准入/排除数以 [实时 status.json](https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/status.json) 为准：candidate_counts 为候选数，counts 为默认优选数，excluded_records 与 exclusion_reasons 提供排除数量和原因，quality_warnings 提供未知警告（可重叠）。现有来源没有逐行真实测量时间和测点归因，仍可保留其公开优选资格，但不能称为测量健康。坏 IPv6 即使导致默认全空也不会放行。
 
 ## 直接使用
 
@@ -25,11 +25,11 @@ Raw 基址：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregat
 
 TXT 每行一个 IP，源未提供端口时 JSON port=null，不表示验证过 443；有端口则 IPv4:port / [IPv6]:port，地址+端口去重。CMLiussss 标签保存在 carrier_claim/upstream_label，验证分类仍 general，carrier_verified=false，因此三网推荐文件有意为空。
 
-消费者应从同一不可变提交读取 status 与文件：检查 schema_version=2、policy_version、usable=true、当前时间不晚于 recommendation_valid_until，再核对 file_sha256。只下载裸 TXT 无法判断过期。candidate_usable 不代表可推荐；dataset_valid_until 只是候选抓取期限。推荐为空时 usable=false，但完整抓取、正确过滤仍是成功运行。
+消费者应从同一不可变提交读取 status 与文件：检查 schema_version=3、policy_version、usable=true、当前时间不晚于 recommendation_valid_until，再核对 file_sha256。只下载裸 TXT 无法判断过期。candidate_usable 不代表可推荐；dataset_valid_until 只是候选抓取期限。推荐为空时 usable=false，但完整抓取、正确过滤仍是成功运行。
 
 ## 来源、顺序与许可
 
-3 个配置提供方、6 个适配器，不是 6 个独立测点。固定顺序 IPDB v4/v6、cf-speed-dns、CMLiussss cmcc/cu/ct，逐轮取一条，保序去重；每条 provenance 保留所有观察和各自 quality 原因。IPDB 保存完整已验证 CSV，rank/csv_rank 是原表顺序，shortlist_rank 标记上游名单位置；上游入榜也不豁免质量门槛。不随机洗牌，不跨未知网络比较速度。
+3 个配置提供方、6 个适配器，不是 6 个独立测点。固定顺序 IPDB v4/v6、cf-speed-dns、CMLiussss cmcc/cu/ct，逐轮取一条，保序去重；每条 provenance 保留所有观察和 quality 警告/排除原因。IPDB 保存完整合法 CSV 候选，rank/csv_rank 是原表顺序，shortlist_rank 标记上游名单位置；先按名单顺序供应优选，再保留非名单候选，后者绝不独立进入默认结果。上游入榜不豁免明确失败。不随机洗牌，不跨未知网络比较速度。
 
 - IPDB：https://github.com/ymyuuu/IPDB 。读取同一不可变提交的 BestCF/ipv4.csv、ipv6.csv、bestcfv4.txt、bestcfv6.txt 与 LICENSE。每轮核对保留的 MIT 通知，变更则停止该源新抓取。下载单位 MB/s，丢包 ratio，延迟单位未明则 null；source_published_at 是提交时间，不是测量时间。
 - cf-speed-dns：https://github.com/ZhiXuanWang/cf-speed-dns ，文档最小结果接口 https://ip.164746.xyz/ipTop10.html 。
@@ -41,7 +41,7 @@ TXT 每行一个 IP，源未提供端口时 JSON port=null，不表示验证过 
 
 fetched_at 是成功下载/校验结束时间；measurement_time 未提供就为 null，绝不以 fetch/commit 代替。每轮获取 https://www.cloudflare.com/ips-v4 与 https://www.cloudflare.com/ips-v6 ，仅全球单播且在官方网段的地址进入候选；域名、BYOIP、保留/私有地址排除。
 
-部分失败源候选最多保留原抓取后 24 小时，不续期；过期移出当前合并，缓存观察不可推荐。全源或官方网段失败，推荐立即清空，旧候选和 last-good-candidates.json 留作取证；过期绝不 usable。last-good 只在所有配置源成功时更新，历史 Git 提交也保留。采集 state 与 recommendation_state 分开显示 healthy/empty/degraded/expired，healthy 只指公开证据合格，不是认证代理健康。
+部分失败源候选最多保留原抓取后 24 小时，不续期；过期移出当前合并，缓存观察不可推荐。全源或官方网段失败，推荐立即清空，旧候选和 last-good-candidates.json 留作取证；过期绝不 usable。last-good 只在所有配置源成功时更新，历史 Git 提交也保留。采集 state 与 recommendation_state 分开显示 upstream-preferred/empty/degraded/expired，不用 healthy 暗示认证健康。
 
 Actions 每小时第 23 分钟请求运行，支持手动触发；GitHub 可能延迟/跳过。调度、并发锁、最小权限与固定 action SHA 保留。只提交变化，不 force push，不额外堆积历史目录。先写故障状态，再使全源故障工作流失败；推荐空但采集成功不报失败。测试崩溃/推送失败无法保证状态写回，消费端仍须检查截止时间。
 
