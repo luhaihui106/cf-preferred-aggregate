@@ -69,6 +69,27 @@ def select_ipdb(csv_text, shortlist_text, family):
     return result
 
 
+def collect_ipdb(csv_text, shortlist_text, family):
+    """Keep the full metric table; shortlist rank is annotation, not immunity."""
+    shortlist=parse_ip_list(shortlist_text,limit=20)
+    ranks={str(ipaddress.ip_address(r['address'])):r['rank'] for r in shortlist}
+    if len(ranks)!=len(shortlist) or any(ipaddress.ip_address(k).version!=family for k in ranks):
+        raise ValueError('inconsistent shortlist')
+    rows=parse_csv(csv_text)
+    csv_keys=set()
+    for row in rows:
+        try: csv_keys.add(str(ipaddress.ip_address(row['address'])))
+        except ValueError: pass
+    if not set(ranks)<=csv_keys: raise ValueError('shortlist inconsistent with CSV')
+    for row in rows:
+        row['csv_rank']=row['rank']
+        try: key=str(ipaddress.ip_address(row['address']))
+        except ValueError: key=row['address']
+        row['shortlist_rank']=ranks.get(key)
+        row['selection']='full published CSV; shortlist annotation only'
+    return rows
+
+
 def parse_ranges(text, family):
     nets = [ipaddress.ip_network(s.strip(), strict=True) for s in text.splitlines() if s.strip()]
     if not nets or len(nets)>100 or any(n.version!=family or not n.is_global or n.prefixlen < (8 if family==4 else 16) for n in nets):

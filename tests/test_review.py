@@ -48,7 +48,8 @@ class ReviewRegressions(unittest.TestCase):
                 '2026-10-30T11:59:59Z','2026-10-30T12:00:02Z','2026-10-30T12:00:03Z',
                 '2026-10-30T12:00:04Z']):
                 s=f.run_case(d,fail=(4,),now=None)
-            self.assertTrue(s['usable'])
+            self.assertTrue(s['candidate_usable'])
+            self.assertFalse(s['usable'])
             self.assertEqual(s['sources']['ipdb-v4']['state'],'expired')
             self.assertEqual(s['counts']['all-v4'],0)
             self.assertGreater(s['dataset_valid_until'],s['dataset_generated_at'])

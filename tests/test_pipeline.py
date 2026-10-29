@@ -31,9 +31,10 @@ class PipelineTests(unittest.TestCase):
     def test_fresh_partial_full_failure_expiry_and_no_publish(self):
         with tempfile.TemporaryDirectory() as d:
             s = self.run_case(d)
-            self.assertEqual(s['counts']['all-v4'],1)
-            self.assertEqual(s['counts']['all-v6'],1)
-            self.assertTrue(s['usable'])
+            self.assertEqual(s['candidate_counts']['all-v4'],1)
+            self.assertEqual(s['candidate_counts']['all-v6'],1)
+            self.assertTrue(s['candidate_usable'])
+            self.assertFalse(s['usable'])
             self.assertEqual(s['sources']['ipdb-v4']['input_rows'],3)
             self.assertEqual(s['sources']['ipdb-v4']['preferred_rows'],1)
             self.assertEqual(s['counts']['cmcc-v4'],0)
@@ -63,7 +64,7 @@ class PipelineTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             s=self.run_case(d,fail=(4,6))
             self.assertFalse(s['usable'])
-            self.assertFalse((Path(d)/'records.json').exists())
+            self.assertEqual(json.loads((Path(d)/'records.json').read_text())['records'],[])
             self.assertTrue((Path(d)/'status.json').exists())
     def test_deterministic(self):
         with tempfile.TemporaryDirectory() as x, tempfile.TemporaryDirectory() as y:
@@ -74,7 +75,7 @@ class PipelineTests(unittest.TestCase):
             self.run_case(d)
             s=self.run_case(d,fail=(6,),now='2026-10-31T12:00:00Z')
             self.assertEqual(s['counts']['all-v6'],0)
-            self.assertEqual(s['counts']['all-v4'],1)
+            self.assertEqual(s['candidate_counts']['all-v4'],1)
             self.assertEqual(s['sources']['ipdb-v6']['state'],'expired')
 
 class NetworkTests(unittest.TestCase):

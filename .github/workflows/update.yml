@@ -41,4 +41,4 @@ jobs:
           fi
       - name: Signal unusable state after publishing status
         run: |
-          python3 -c "import json,sys; s=json.load(open('data/status.json')); print(s['state'],s['counts']); sys.exit(0 if s['usable'] else 1)"
+          python3 -c "import json,sys; s=json.load(open('data/status.json')); print(s['state'],s['recommendation_state'],s['candidate_counts'],s['counts']); sys.exit(0 if s['collection_ok'] else 1)"

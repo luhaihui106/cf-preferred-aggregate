@@ -1,0 +1,16 @@
+{
+  "authenticated_proxy_health": "not tested",
+  "conflict_policy": "all observations must pass",
+  "fallback_padding": false,
+  "fetch_max_seconds": 86400,
+  "loss_required": 0,
+  "loss_unit": "ratio",
+  "measurement_max_seconds": 86400,
+  "packet_evidence": "finite integers sent>0 and received=sent; packets units",
+  "require_measurement_time": true,
+  "require_probe_viewpoint": true,
+  "require_source_state": "fresh",
+  "speed_required": "finite > 0",
+  "speed_unit": "MB/s",
+  "version": "strict-evidence-v1"
+}
