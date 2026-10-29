@@ -1,13 +1,13 @@
 {
   "adapter_count": 6,
-  "attempted_at": "2026-10-29T15:29:55Z",
+  "attempted_at": "2026-10-29T15:32:12Z",
   "candidate_counts": {
     "all-v4": 28,
     "all-v6": 16
   },
   "candidate_usable": true,
   "cloudflare_ranges": {
-    "fetched_at": "2026-10-29T15:29:55Z",
+    "fetched_at": "2026-10-29T15:32:13Z",
     "networks": {
       "4": [
         "173.245.48.0/20",
@@ -39,7 +39,7 @@
     "state": "fresh"
   },
   "collection_ok": true,
-  "completed_at": "2026-10-29T15:29:56Z",
+  "completed_at": "2026-10-29T15:32:15Z",
   "contributing_provider_count": 3,
   "counts": {
     "all-v4": 19,
@@ -53,8 +53,8 @@
     "general-v4": 19,
     "general-v6": 0
   },
-  "dataset_generated_at": "2026-10-29T15:29:56Z",
-  "dataset_valid_until": "2026-10-30T15:29:55Z",
+  "dataset_generated_at": "2026-10-29T15:32:15Z",
+  "dataset_valid_until": "2026-10-30T15:32:13Z",
   "excluded_records": 25,
   "exclusion_reasons": {
     "invalid_packet_evidence": 25,
@@ -67,7 +67,7 @@
     "all-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "candidates-v4.txt": "9eea351003c8746d32c934778897c06bc4fc120900d86441f8c7ab9d575403fb",
     "candidates-v6.txt": "1c6d69a85c6eb8892ff51a942b6cf45a700e1f8081c0282c8dbc5b817edc6a2a",
-    "candidates.json": "b67ac3071b7d01224e8f741a2c988414ac96150bbb3112245406477346030485",
+    "candidates.json": "64abb943002b6b2048f44f00bf505aa26e2493ce855778b1ebf47584f4235e38",
     "cmcc-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ct-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -76,12 +76,12 @@
     "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "general-v4.txt": "22cab8f2235b2d64b9a47671f71941447c8ffee2ee064b3199a42febad134f44",
     "general-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "last-good-candidates.json": "b67ac3071b7d01224e8f741a2c988414ac96150bbb3112245406477346030485",
+    "last-good-candidates.json": "64abb943002b6b2048f44f00bf505aa26e2493ce855778b1ebf47584f4235e38",
     "policy.json": "7352a7c944030c92ff0c6497634b4d6ac45b65e0722a41beaab10417cf15bf91",
     "recommended-v4.txt": "22cab8f2235b2d64b9a47671f71941447c8ffee2ee064b3199a42febad134f44",
     "recommended-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "records.json": "ba8954b36ee6bd6809cd53335043aa2910c4fe7290766a2b6fa32daccdbf419a",
-    "sources.json": "a2a74ad494aac21e1526d28b7036debce798848b1d0660e6efc40bd5e7e25a43"
+    "records.json": "38df2f9cd0a9b9c59a77205c19cfcb4ed3fa9256121d7610f3092ef5d9da9892",
+    "sources.json": "32f4cd400a5633676c526577f1270ddb015598a2564724e2e2b0bf253d73c3c9"
   },
   "fresh_provider_count": 3,
   "independently_verified_records": 0,
@@ -105,18 +105,18 @@
     "unknown_speed": 18
   },
   "recommendation_state": "upstream-preferred",
-  "recommendation_valid_until": "2026-10-30T15:29:55Z",
+  "recommendation_valid_until": "2026-10-30T15:32:13Z",
   "recommended_provider_count": 3,
   "schema_version": 3,
   "sources": {
     "cf-speed-dns-v4": {
       "accepted_rows": 2,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "general",
       "default_eligible_records": 2,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:29:56Z",
+      "fetched_at": "2026-10-29T15:32:14Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 2,
       "kind": "published_preferred_shortlist",
@@ -147,12 +147,12 @@
     },
     "cmliussss-cmcc": {
       "accepted_rows": 8,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "cmcc",
       "default_eligible_records": 8,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:29:56Z",
+      "fetched_at": "2026-10-29T15:32:15Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -183,12 +183,12 @@
     },
     "cmliussss-ct": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "ct",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:29:56Z",
+      "fetched_at": "2026-10-29T15:32:15Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",
@@ -219,12 +219,12 @@
     },
     "cmliussss-cu": {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "cu",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:29:56Z",
+      "fetched_at": "2026-10-29T15:32:15Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -255,7 +255,7 @@
     },
     "ipdb-v4": {
       "accepted_rows": 10,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "general",
       "default_eligible_records": 1,
       "exclusion_reasons": {
@@ -263,7 +263,7 @@
         "positive_loss": 9
       },
       "family": 4,
-      "fetched_at": "2026-10-29T15:29:55Z",
+      "fetched_at": "2026-10-29T15:32:13Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
@@ -299,7 +299,7 @@
     },
     "ipdb-v6": {
       "accepted_rows": 16,
-      "attempted_at": "2026-10-29T15:29:55Z",
+      "attempted_at": "2026-10-29T15:32:12Z",
       "carrier": "general",
       "default_eligible_records": 0,
       "exclusion_reasons": {
@@ -308,7 +308,7 @@
         "zero_speed": 16
       },
       "family": 6,
-      "fetched_at": "2026-10-29T15:29:56Z",
+      "fetched_at": "2026-10-29T15:32:13Z",
       "id": "ipdb-v6",
       "input_rows": 16,
       "kind": "published_metric_table_with_shortlist",
