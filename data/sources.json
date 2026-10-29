@@ -1,0 +1,44 @@
+{
+  "attempted_at": "2026-10-29T12:29:25Z",
+  "schema_version": 1,
+  "sources": [
+    {
+      "accepted_rows": 10,
+      "attempted_at": "2026-10-29T12:29:25Z",
+      "carrier": "general",
+      "family": 4,
+      "fetched_at": "2026-10-29T12:29:26Z",
+      "id": "ipdb-v4",
+      "kind": "published_results",
+      "measurement_time": null,
+      "origin": "https://github.com/ymyuuu/IPDB",
+      "path": "BestCF/ipv4.csv",
+      "rejected_rows": 0,
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/d1964fb5fe6c1cad46d6438d38f762429d7ecd4c/BestCF/ipv4.csv",
+      "source_published_at": "2026-10-29T12:27:11Z",
+      "source_revision": "d1964fb5fe6c1cad46d6438d38f762429d7ecd4c",
+      "state": "fresh",
+      "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/ipv4.csv"
+    },
+    {
+      "accepted_rows": 925,
+      "attempted_at": "2026-10-29T12:29:25Z",
+      "carrier": "general",
+      "family": 6,
+      "fetched_at": "2026-10-29T12:29:26Z",
+      "id": "ipdb-v6",
+      "kind": "published_results",
+      "measurement_time": null,
+      "origin": "https://github.com/ymyuuu/IPDB",
+      "path": "BestCF/ipv6.csv",
+      "rejected_rows": 0,
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/d1964fb5fe6c1cad46d6438d38f762429d7ecd4c/BestCF/ipv6.csv",
+      "source_published_at": "2026-10-29T12:27:11Z",
+      "source_revision": "d1964fb5fe6c1cad46d6438d38f762429d7ecd4c",
+      "state": "fresh",
+      "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/ipv6.csv"
+    }
+  ]
+}

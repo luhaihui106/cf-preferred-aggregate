@@ -1,0 +1,107 @@
+{
+  "attempted_at": "2026-10-29T12:29:25Z",
+  "cloudflare_ranges": {
+    "fetched_at": "2026-10-29T12:29:25Z",
+    "networks": {
+      "4": [
+        "173.245.48.0/20",
+        "103.21.244.0/22",
+        "103.22.200.0/22",
+        "103.31.4.0/22",
+        "141.101.64.0/18",
+        "108.162.192.0/18",
+        "190.93.240.0/20",
+        "188.114.96.0/20",
+        "197.234.240.0/22",
+        "198.41.128.0/17",
+        "162.158.0.0/15",
+        "104.16.0.0/13",
+        "104.24.0.0/14",
+        "172.64.0.0/13",
+        "131.0.72.0/22"
+      ],
+      "6": [
+        "2400:cb00::/32",
+        "2606:4700::/32",
+        "2803:f800::/32",
+        "2405:b500::/32",
+        "2405:8100::/32",
+        "2a06:98c0::/29",
+        "2c0f:f248::/32"
+      ]
+    },
+    "state": "fresh"
+  },
+  "completed_at": "2026-10-29T12:29:26Z",
+  "counts": {
+    "all-v4": 10,
+    "all-v6": 925,
+    "cmcc-v4": 0,
+    "cmcc-v6": 0,
+    "ct-v4": 0,
+    "ct-v6": 0,
+    "cu-v4": 0,
+    "cu-v6": 0,
+    "general-v4": 10,
+    "general-v6": 925
+  },
+  "dataset_generated_at": "2026-10-29T12:29:26Z",
+  "dataset_valid_until": "2026-10-30T12:29:26Z",
+  "file_sha256": {
+    "all-v4.txt": "6f76627f0f7e6ee725724eb956c58dccba324c7c7cc2758f4c0382448a268487",
+    "all-v6.txt": "6016674bc0e362af615c131d41d84fcedb1053aca1b70a50b024bddb0de69b67",
+    "cmcc-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ct-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ct-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cu-v4.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "general-v4.txt": "6f76627f0f7e6ee725724eb956c58dccba324c7c7cc2758f4c0382448a268487",
+    "general-v6.txt": "6016674bc0e362af615c131d41d84fcedb1053aca1b70a50b024bddb0de69b67"
+  },
+  "published_dataset": true,
+  "schema_version": 1,
+  "sources": {
+    "ipdb-v4": {
+      "accepted_rows": 10,
+      "attempted_at": "2026-10-29T12:29:25Z",
+      "carrier": "general",
+      "family": 4,
+      "fetched_at": "2026-10-29T12:29:26Z",
+      "id": "ipdb-v4",
+      "kind": "published_results",
+      "measurement_time": null,
+      "origin": "https://github.com/ymyuuu/IPDB",
+      "path": "BestCF/ipv4.csv",
+      "rejected_rows": 0,
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/d1964fb5fe6c1cad46d6438d38f762429d7ecd4c/BestCF/ipv4.csv",
+      "source_published_at": "2026-10-29T12:27:11Z",
+      "source_revision": "d1964fb5fe6c1cad46d6438d38f762429d7ecd4c",
+      "state": "fresh",
+      "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/ipv4.csv"
+    },
+    "ipdb-v6": {
+      "accepted_rows": 925,
+      "attempted_at": "2026-10-29T12:29:25Z",
+      "carrier": "general",
+      "family": 6,
+      "fetched_at": "2026-10-29T12:29:26Z",
+      "id": "ipdb-v6",
+      "kind": "published_results",
+      "measurement_time": null,
+      "origin": "https://github.com/ymyuuu/IPDB",
+      "path": "BestCF/ipv6.csv",
+      "rejected_rows": 0,
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/d1964fb5fe6c1cad46d6438d38f762429d7ecd4c/BestCF/ipv6.csv",
+      "source_published_at": "2026-10-29T12:27:11Z",
+      "source_revision": "d1964fb5fe6c1cad46d6438d38f762429d7ecd4c",
+      "state": "fresh",
+      "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/ipv6.csv"
+    }
+  },
+  "stale_max_seconds": 86400,
+  "state": "fresh",
+  "usable": true
+}

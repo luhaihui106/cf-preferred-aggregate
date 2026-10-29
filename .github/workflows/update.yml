@@ -1,0 +1,44 @@
+name: Update preferred results
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: preferred-results-main
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.repository == 'luhaihui106/cf-preferred-aggregate' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout verified v4 revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Offline tests and public boundary
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 audit.py
+      - name: Fetch published preferred results
+        run: python3 pipeline.py --output data
+      - name: Validate generated data and public boundary
+        run: python3 audit.py
+      - name: Commit bounded current snapshot (including failure status)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: refresh preferred-result snapshot'
+            git push origin HEAD:main
+          fi
+      - name: Signal unusable state after publishing status
+        run: |
+          python3 -c "import json,sys; s=json.load(open('data/status.json')); print(s['state'],s['counts']); sys.exit(0 if s['usable'] else 1)"
