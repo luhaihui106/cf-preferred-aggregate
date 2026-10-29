@@ -29,4 +29,4 @@ state 是采集状态 fresh/partial/stale/expired/range_unavailable/range_change
 
 消费者应从同一不可变提交读取 status 和数据，检查 schema_version=3、policy_version、usable、当前时间不晚于 recommendation_valid_until，再核对 file_sha256。推荐期限取抓取期限及已知测量/显式期限的最早值；未知测量时间不捏造期限。candidate_usable/dataset_valid_until 不代表健康。裸 TXT 本身没有时效保证。
 
-无填充、无地区/运营商已验证保证、无代理身份测试。carrier_claim 为上游声称；无验证仍归 general，三网文件不从通用池填充。原始候选不是默认优选。来源许可、范围与调度不扩大，本次不恢复已取消的 Pages 集成。
+无填充、无地区/运营商已验证保证、无代理身份测试。carrier_claim 为上游声称；cmcc/cu/ct 文件按该标注导出，明确“上游标注，未独立验证”，carrier_verified=false。general 仅无上游三网标注，all 为全部合格端点去重并集；冲突可进入多个被标注文件，保留 carrier_conflict 和 carrier_claim_sources，不能把分类数量相加当独立端点。category=general 是兼容的非验证字段，不再决定 TXT 分组。未知来源不推断标注，明确坏指标跨所有分组否决。status.carrier_export_policy.version=source-claimed-v1 标记此语义，质量政策未变。原始候选不是默认优选。来源许可、范围与调度不扩大，本次不恢复已取消的 Pages 集成。

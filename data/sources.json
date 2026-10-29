@@ -1,10 +1,10 @@
 {
-  "attempted_at": "2026-10-29T15:32:12Z",
+  "attempted_at": "2026-10-29T15:45:36Z",
   "schema_version": 3,
   "sources": [
     {
       "accepted_rows": 10,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "general",
       "default_eligible_records": 1,
       "exclusion_reasons": {
@@ -12,7 +12,7 @@
         "positive_loss": 9
       },
       "family": 4,
-      "fetched_at": "2026-10-29T15:32:13Z",
+      "fetched_at": "2026-10-29T15:45:37Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
@@ -48,7 +48,7 @@
     },
     {
       "accepted_rows": 16,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "general",
       "default_eligible_records": 0,
       "exclusion_reasons": {
@@ -57,7 +57,7 @@
         "zero_speed": 16
       },
       "family": 6,
-      "fetched_at": "2026-10-29T15:32:13Z",
+      "fetched_at": "2026-10-29T15:45:37Z",
       "id": "ipdb-v6",
       "input_rows": 16,
       "kind": "published_metric_table_with_shortlist",
@@ -94,12 +94,12 @@
     },
     {
       "accepted_rows": 2,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "general",
       "default_eligible_records": 2,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:32:14Z",
+      "fetched_at": "2026-10-29T15:45:38Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 2,
       "kind": "published_preferred_shortlist",
@@ -130,12 +130,12 @@
     },
     {
       "accepted_rows": 8,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "cmcc",
       "default_eligible_records": 8,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:32:15Z",
+      "fetched_at": "2026-10-29T15:45:38Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -166,12 +166,12 @@
     },
     {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "cu",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:32:15Z",
+      "fetched_at": "2026-10-29T15:45:38Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -202,12 +202,12 @@
     },
     {
       "accepted_rows": 4,
-      "attempted_at": "2026-10-29T15:32:12Z",
+      "attempted_at": "2026-10-29T15:45:36Z",
       "carrier": "ct",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-10-29T15:32:15Z",
+      "fetched_at": "2026-10-29T15:45:38Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",

@@ -21,9 +21,16 @@ Raw 基址：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregat
 - 候选及全部来源指标：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/candidates.json
 - 推荐及来源：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/records.json
 - 来源/状态/机器策略：同基址 sources.json、status.json、policy.json
-- all-v4/v6.txt 等价于 recommended-v4/v6.txt；general-v4/v6.txt 只取验证分类为 general 的推荐。cmcc/cu/ct-v4/v6.txt 为已验证的运营商推荐，不能从通用候选填充。
+- all-v4/v6.txt 等价于 recommended-v4/v6.txt，是全部合格端点的去重并集。general-v4/v6.txt 仅含没有上游运营商标注的推荐，不代表验证过的“全国通用”。
+- 移动（上游标注，未独立验证）：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/cmcc-v4.txt
+- 联通（上游标注，未独立验证）：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/cu-v4.txt
+- 电信（上游标注，未独立验证）：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/ct-v4.txt
+- 通用（无运营商标注）：https://raw.githubusercontent.com/luhaihui106/cf-preferred-aggregate/main/data/general-v4.txt
+- IPv6 对应文件将 v4 换成 v6；无合格结果时文件为空，不填充。
 
-TXT 每行一个 IP，源未提供端口时 JSON port=null，不表示验证过 443；有端口则 IPv4:port / [IPv6]:port，地址+端口去重。CMLiussss 标签保存在 carrier_claim/upstream_label，验证分类仍 general，carrier_verified=false，因此三网推荐文件有意为空。
+TXT 每行一个 IP，源未提供端口时 JSON port=null，不表示验证过 443；有端口则 IPv4:port / [IPv6]:port，每个文件按地址+端口去重。CMLiussss 的 carrier_claim/upstream_label 原样保留；cmcc/cu/ct 按上游标注分组，不再因缺乏独立验证而丢弃分类。carrier_verified=false，carrier_grouping=source-claimed/unverified；兼容字段 category=general 不表示 TXT 分类或运营商验证。carrier_claim_sources 给出每个标注的 source_id。冲突端点可同时进入多个被标注文件，carrier_conflict=true，all 仍只计一次。无标注来源不会凭空增加运营商标签；同端点跨源合并保留全部观察，任意明确坏指标会从所有推荐文件一起排除。
+
+status.carrier_export_policy.version=source-claimed-v1 明确当前文件语义；schema 仍为 v3，质量政策 upstream-preferred-v1 不变。三网数量可能重叠，不能相加代替 all。它们不是当地/全国运营商测速保证。
 
 消费者应从同一不可变提交读取 status 与文件：检查 schema_version=3、policy_version、usable=true、当前时间不晚于 recommendation_valid_until，再核对 file_sha256。只下载裸 TXT 无法判断过期。candidate_usable 不代表可推荐；dataset_valid_until 只是候选抓取期限。推荐为空时 usable=false，但完整抓取、正确过滤仍是成功运行。
 
@@ -36,6 +43,8 @@ TXT 每行一个 IP，源未提供端口时 JSON port=null，不表示验证过 
 - CMLiussss：https://cf.090227.xyz/ ，最小公开接口 /cmcc、/cu、/ct；保留来源标签但不冒充独立三网测量。
 
 后两者使用有界、低频、署名的最小事实结果接口，独立数据许可未知，不宣称无限再分发权或法律确定性。原创代码 MIT 不会重新授权上游数据。源条款、原始署名与未启用源决定见 [DATA-NOTICE.md](DATA-NOTICE.md)。Wetest 明确限制批量自动化，未获 API 与再分发许可，不启用；BestCF/joname 镜像不计独立票；byoip 域名、CloudflareYes 和第三方反代池不在本次输入中。
+
+cf-speed-dns 自有首页 https://ip.164746.xyz/ 的确公开每 IP 丢包、速度与时间，本次已评估但未接入伴随指标。首页与 Top 是两个独立缓存响应；即便 IP 相同，也不能证明是同轮测量，且页面时间没有时区。为避免把另轮同 IP 指标冒充当前 Top 快照，本版本继续只收 Top 原序，metrics={}，measurement_time=null，明确 unknown 警告；不声称已过滤其网页所列指标。可进一步考虑同一不可变上游提交匹配，但不为本次最小分类修复扩展采集路径。
 
 ## 新鲜度与失败
 

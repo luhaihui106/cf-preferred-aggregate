@@ -90,7 +90,7 @@ def summarize_quality(rows):
 
 
 def generate(out,now=None,fetch=fetch_text):
-    from aggregate import parse_csv,parse_ranges,valid_address,merge,parse_ip_list,collect_ipdb
+    from aggregate import parse_csv,parse_ranges,valid_address,merge,parse_ip_list,collect_ipdb,annotate_carriers
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     fixed_now=now
     clock=(lambda: fixed_now) if fixed_now else utcnow
@@ -209,8 +209,7 @@ def generate(out,now=None,fetch=fetch_text):
             sid=p['source_id']
             if sid not in seen_sources and status['sources'].get(sid,{}).get('state')!='fresh':
                 record['provenance'].append(p)
-        claims=sorted({p['carrier_claim'] for p in record['provenance'] if p['carrier_claim']!='general'})
-        record.update(carrier_claims=claims,carrier_conflict=len(claims)>1)
+        annotate_carriers(record)
     valid_until=min(timestamp(s['fetched_at'])+dt.timedelta(seconds=STALE_SECONDS) for s in status['sources'].values() if s['accepted_rows'])
     status.update(state='fresh' if all(s['state']=='fresh' for s in status['sources'].values()) else 'partial',
         published_dataset=True,usable=True,dataset_generated_at=completed_at,
@@ -220,8 +219,14 @@ def generate(out,now=None,fetch=fetch_text):
 def publish(out,status,records,now,new_dataset):
     """Separate current recommendations from retained forensic candidates."""
     from collections import Counter
+    from aggregate import annotate_carriers,in_export
 
+    for record in records: annotate_carriers(record)
     status['schema_version']=3
+    status['carrier_export_policy']=dict(version='source-claimed-v1',
+        label='上游标注，未独立验证',carrier_verified=False,
+        general='no upstream carrier claim',all='all eligible unique endpoints',
+        conflicts='include in each claimed carrier; preserve sources and conflict flag')
     status['policy_version']=POLICY['version']
     status['completed_at']=now
     status['collection_ok']=new_dataset
@@ -259,7 +264,7 @@ def publish(out,status,records,now,new_dataset):
         status['candidate_counts'][f'all-v{family}']=len(candidates)
         for category in ('all','general','cmcc','cu','ct'):
             name=f'{category}-v{family}'
-            selected=[r for r in recommended if r['family']==family and (category=='all' or r['category']==category)]
+            selected=[r for r in recommended if r['family']==family and in_export(r,category)]
             write_txt(name,selected)
             status['counts'][name]=len(selected)
         write_txt(f'recommended-v{family}',[r for r in recommended if r['family']==family])

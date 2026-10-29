@@ -46,6 +46,7 @@ def check_data(root):
         if r['category']!='general': raise ValueError('unsupported carrier category')
     if status.get('schema_version') in (2,3):
         from quality import evaluate, POLICY
+        from aggregate import annotate_carriers
         candidates=json.loads((root/'candidates.json').read_text())['records']
         if status['policy_version']!=POLICY['version']: raise ValueError('policy mismatch')
         for name,digest in status['file_sha256'].items():
@@ -60,7 +61,20 @@ def check_data(root):
         keys=[(r['address'],r['port']) for r in candidates]
         if len(keys)!=len(set(keys)): raise ValueError('duplicate candidates')
         import copy
-        evaluated=evaluate(copy.deepcopy(candidates),status['completed_at'],status['sources'])
+        evaluated=copy.deepcopy(candidates)
+        for record in evaluated:
+            annotate_carriers(record)
+        if evaluated!=candidates: raise ValueError('carrier claim metadata mismatch')
+        carrier_policy=status.get('carrier_export_policy',{})
+        if (carrier_policy.get('version')!='source-claimed-v1' or
+                carrier_policy.get('carrier_verified') is not False or
+                carrier_policy.get('label')!='上游标注，未独立验证'):
+            raise ValueError('carrier export policy missing or false verification')
+        for record in candidates:
+            for observation in record['provenance']:
+                if observation.get('carrier_verified') is not False:
+                    raise ValueError('unsupported carrier observation verification')
+        evaluate(evaluated,status['completed_at'],status['sources'])
         if not status['collection_ok']:
             for r in evaluated:
                 r['quality']['eligible']=False
@@ -94,9 +108,10 @@ def check_data(root):
         file=root/(name+'.txt');text=file.read_text()
         lines=text.splitlines()
         family=int(name[-1]);category=name.split('-')[0]
+        from aggregate import in_export
         expected=[r['address'] if r['port'] is None else
             (f"[{r['address']}]" if family==6 else r['address'])+':'+str(r['port'])
-            for r in records if r['family']==family and (category=='all' or r['category']==category)]
+            for r in records if r['family']==family and in_export(r,category)]
         if lines!=expected or len(lines)!=count or len(lines)!=len(set(lines)):
             raise ValueError('count/order mismatch '+name)
         if hashlib.sha256(file.read_bytes()).hexdigest()!=status['file_sha256'][file.name]:

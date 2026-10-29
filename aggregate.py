@@ -114,11 +114,24 @@ def merge(groups):
                                 'category':'general','provenance':[]}
             records[key]['provenance'].append({'source_id':source, **row})
     for record in records.values():
-        claims = sorted({p['carrier_claim'] for p in record['provenance'] if p['carrier_claim']!='general'})
-        record['carrier_claims'] = claims
-        record['carrier_conflict'] = len(claims)>1
-        # Unsupported claims never enter a trustworthy carrier pool.
+        annotate_carriers(record)
     return list(records.values())
+
+
+def annotate_carriers(record):
+    """Export claims with their original sources; never promote to verification."""
+    claims = sorted({p['carrier_claim'] for p in record['provenance']
+                     if p['carrier_claim'] in ('cmcc', 'cu', 'ct')})
+    record.update(carrier_claims=claims, carrier_conflict=len(claims)>1,
+                  carrier_verified=False, carrier_grouping='source-claimed/unverified',
+                  carrier_claim_sources={claim:sorted({p['source_id'] for p in record['provenance']
+                      if p['carrier_claim']==claim}) for claim in claims})
+
+
+def in_export(record, category):
+    """General means no upstream carrier claim, not verified-general geography."""
+    return (category=='all' or
+            (not record['carrier_claims'] if category=='general' else category in record['carrier_claims']))
 
 
 def valid_address(text, family, nets):
