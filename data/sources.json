@@ -1,13 +1,13 @@
 {
-  "attempted_at": "2026-10-29T12:29:25Z",
+  "attempted_at": "2026-10-29T12:32:41Z",
   "schema_version": 1,
   "sources": [
     {
       "accepted_rows": 10,
-      "attempted_at": "2026-10-29T12:29:25Z",
+      "attempted_at": "2026-10-29T12:32:41Z",
       "carrier": "general",
       "family": 4,
-      "fetched_at": "2026-10-29T12:29:26Z",
+      "fetched_at": "2026-10-29T12:32:41Z",
       "id": "ipdb-v4",
       "kind": "published_results",
       "measurement_time": null,
@@ -23,10 +23,10 @@
     },
     {
       "accepted_rows": 925,
-      "attempted_at": "2026-10-29T12:29:25Z",
+      "attempted_at": "2026-10-29T12:32:41Z",
       "carrier": "general",
       "family": 6,
-      "fetched_at": "2026-10-29T12:29:26Z",
+      "fetched_at": "2026-10-29T12:32:42Z",
       "id": "ipdb-v6",
       "kind": "published_results",
       "measurement_time": null,
