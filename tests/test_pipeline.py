@@ -19,10 +19,14 @@ class PipelineTests(unittest.TestCase):
                 return json.dumps({'sha':'a'*40,'commit':{'committer':{'date':NOW}}})
             if url.endswith('/LICENSE'): return a.IPDB_LICENSE
             if any(url.endswith(f'ipv{f}.csv') for f in fail): raise TimeoutError('upstream timeout')
-            if url.endswith('ipv4.csv'): return HEADER+'104.16.0.1,4,4,0,10,20\n104.16.0.1,4,4,0,11,19\n8.8.8.8,4,4,0,1,99\n'
+            if url.endswith('ipv4.csv'): return HEADER+'104.16.0.1,4,4,0,10,20\n104.16.0.1,4,4,0,10,20\n8.8.8.8,4,4,0,1,99\n'
             if url.endswith('ipv6.csv'): return HEADER+'2606:4700::1,4,4,0,20,10\n'
+            if url.endswith('bestcfv4.txt'): return '104.16.0.1\n'
+            if url.endswith('bestcfv6.txt'): return '2606:4700::1\n'
             raise AssertionError('unexpected URL: '+url)
-        return a.generate(Path(root), now=now, fetch=fetch)
+        import pipeline
+        with patch.object(pipeline,'SOURCES',[s for s in pipeline.SOURCES if s['provider_id']=='ipdb']):
+            return a.generate(Path(root), now=now, fetch=fetch)
 
     def test_fresh_partial_full_failure_expiry_and_no_publish(self):
         with tempfile.TemporaryDirectory() as d:
@@ -30,7 +34,8 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(s['counts']['all-v4'],1)
             self.assertEqual(s['counts']['all-v6'],1)
             self.assertTrue(s['usable'])
-            self.assertEqual(s['sources']['ipdb-v4']['rejected_rows'],1)
+            self.assertEqual(s['sources']['ipdb-v4']['input_rows'],3)
+            self.assertEqual(s['sources']['ipdb-v4']['preferred_rows'],1)
             self.assertEqual(s['counts']['cmcc-v4'],0)
             first=(Path(d)/'records.json').read_bytes()
             self.assertEqual(self.run_case(d,fail=(4,))['sources']['ipdb-v4']['state'],'stale')

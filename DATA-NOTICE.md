@@ -1,44 +1,74 @@
-# 上游数据与授权说明
+# 上游数据与使用决策
 
-本项目 LICENSE 只授予原创 Python、测试、工作流和本项目撰写文档的 MIT 权利，不把第三方测量结果重新授予 MIT。地址、数值和来源信息保留上游身份；授权依据与剩余未知分别列出，不把“公开可访问”等同于自由再分发。
+核查日期：2026-10-29。本项目 MIT 仅覆盖原创代码、测试、工作流及原创文档，不给第三方结果重新授予 MIT。没有复制候选项目代码、页面布局或完整测量表。公开可访问不等于许可；缺少根代码 LICENSE 也不能单独证明事实 IP 地址不能引用。以下是有限事实复用的工程决策，不是确定法律结论；权利人异议或新限制出现时应停用并复核。
 
-核查日期：2026-10-29。下表是默认来源决策，未启用项目不会被运行时请求，也不通过镜像绕过限制。
+## 启用：IPDB（1 个提供方、2 个地址族适配器）
 
-## 启用：ymyuuu/IPDB
+- 原始提供方：https://github.com/ymyuuu/IPDB
+- 说明：https://github.com/ymyuuu/IPDB/blob/main/README.md
+- 仓库 MIT：https://github.com/ymyuuu/IPDB/blob/main/LICENSE ，2025 Mingyu 原文完整保留于 notices/IPDB-LICENSE.txt。
+- 选择名单：BestCF/bestcfv4.txt、BestCF/bestcfv6.txt；对应指标：BestCF/ipv4.csv、BestCF/ipv6.csv。
+- 每轮解析 main 提交，再从同一不可变提交读取名单、CSV、LICENSE；授权文本改变或名单与指标不一致则该源失败，不以 CSV 全表替代名单。更上游第三方数据权利无法逐项保证。README 的公开资源/开放数据库说明及服务面向非大陆地区用户、禁止恶意使用等条件仍适用；本项目不调用其 API、不解除适用条件。
 
-- 仓库 https://github.com/ymyuuu/IPDB ，本次审阅版本 4148f0e981ce640ebec8fa68f4c7bb8211ff2b2a。
-- 原始数据位于 BestCF/ipv4.csv、BestCF/ipv6.csv；不是原始 CF CIDR 目录，不使用 bestproxy。
-- 仓库根 LICENSE 为 MIT，版权 2025 Mingyu，未见对仓库 CSV 的单独排除；完整文本见 notices/IPDB-LICENSE.txt。启用依据是该公开仓库整体 MIT 声明和这些随仓库发布的 CSV，不是仅凭代码 license 推断任何外部 API 数据都能复用。
-- README 的服务说明称数据来自公开资源/开放数据库、服务仅面向非大陆地区用户、不允许恶意使用。不调用其 API；本项目不承诺能解除上游限制。
-- 没有独立的测量数据库授权文本，也无法逐条核实其更上游原始数据权属。当前决定是保留明确仓库授权及原声明、有限转引该仓库 CSV，不能保证第三方权利或代替法律意见；如条款改变或出现异议，停止对应来源并复核。
-- 指标及测点：当前 CSV 含包数、丢包率、平均延迟、下载速度 (MB/s)，无逐条测量时间、测点 ISP/地点。一般候选，不得贴国内三网实测标签。Git 提交时间只作快照发布信息。
+### 修正 925 条 IPv6 的质量含义
 
-## 未启用的候选
+在 b12fec4a489867ffb3192c04ff365b4f5e63636c 及本次 live 读取版本，ipv6.csv 有 925 个唯一地址，各发 4 包；430 条零丢包，317/105/73 条分别丢包 25%/50%/75%；全部下载速度为 0.00 MB/s。CSV 按丢包、平均延迟递增，确有探测指标，不是裸网段枚举，但不能称为 925 条高质量优选或吞吐已验证。零速度不能区分未执行下载、失败或四舍五入。
 
-### ZhiXuanWang/cf-speed-dns / ip.164746.xyz
+同提交 bestcfv6.txt 明确发布 10 条，观测上等于 CSV 前 10 条。本项目采用这份上游优选名单并关联 CSV 指标，不自行发明 top-N/丢包阈值。IPv4 同样采用其名单。所有 CSV 行只用于关联和 input_rows 计数；不发布完整 CSV，不把未入名单行称作地址校验失败。source.preferred_rows 是名单行数，accepted_rows 是名单经官方范围校验后的行数，rejected_rows 只指名单地址过滤。未来名单改变就按实际内容处理（最多 20 条，超限显式失败，须复核而非静默截断）。
 
-https://github.com/ZhiXuanWang/cf-speed-dns 、https://ip.164746.xyz/ 。当前仓库含 index.html 表格和 ipTop.html / ipTop10.html 结果文件，README 提供获取接口；网站本次返回 HTTP 403，已通过 GitHub 检查发布页格式，未绕过站点访问限制。未发现根 LICENSE，README 的使用接口说明不是明确的批量再分发许可；故默认不启用、不复制代码或页面。历史作者测点自述不能证明当前 ISP。需要数据再分发授权后再接入。
+没有发现公开的当前 CSV 测量生成程序。名单地址在 CSV 出现多次时：指标冲突则该源失败；指标完全相同则保留所有 csv_ranks，csv_rank 指第一处，不静默丢弃冲突测量。公开 UpBestIP 工作流只消费名单设置 DNS，不能证明测点、测量时间或重现测量链。平均延迟未标单位，unit=null；MB/s、包数及丢包比例按 CSV 原文保留。每条 measurement_time/probe_viewpoint=null。
 
-### CMLiussss
+## 启用：cf-speed-dns（1 个提供方、1 个适配器）
 
-https://cf.090227.xyz/ 与 https://cf.090227.xyz/cmcc 、https://cf.090227.xyz/cu 、https://cf.090227.xyz/ct 。本次直接访问 403；先前公开格式为 IP#标签，未知当前响应体与测量链，接口名不能独立证明 ISP。未建立当前数据批量再分发许可，不启用。代码许可证即使存在，也不自动覆盖站点结果。
+- 原提供方：https://github.com/ZhiXuanWang/cf-speed-dns
+- 文档：https://github.com/ZhiXuanWang/cf-speed-dns/blob/main/README.md
+- 实际入口：https://ip.164746.xyz/ipTop10.html
 
-### Wetest
+README 明确给出 Top/Top10 IP 接口及 curl 自动获取用法。2026-10-29 本轮普通 User-Agent 直接 GET 200，内容为极小的逗号/换行 IP 结果；Top10 名称不保证有 10 条。历史 403 不代表已停服，也不继续作为禁用理由。没有发现单独数据再分发许可或禁止这种有限事实复用的条款；根 LICENSE 缺失不独立构成禁用理由。
 
-https://www.wetest.vip/page/site/about.html 、https://www.wetest.vip/page/api/get_cloudflare_ip.html 、https://www.wetest.vip/page/site/terms.html 。已检查公开介绍和服务条款。条款第 2 节禁止用自动化工具大量获取数据，除非通过其 API 并遵守使用限制；第 3 节主张数据汇编等知识产权，未给出本项目所需的再分发授权。数据可能混合自有监测及第三方来源。页面/API 有三网与指标，但批量抓取/再分发受限；本项目没有获得许可。不调用 bulk API、不采集列表、不借 BestCF 转引绕开限制。关于页可访问不代表授权。需要明确许可范围后才评估。
+决定仅每轮低频获取文档明确面向消费的最小事实名单、署名并保留入口和顺序，不复制实现、HTML 或完整测量表；这不是宣称得到完整数据库再分发授权，也不提供侵权风险保证。最多 20 条，禁止从错误 HTML 正则捞 IP。不启用 GitHub 镜像回退，不以两条路计两个来源。最小接口没有指标/时间/测点，保持 metrics={} 和 null，不从另一次页面读取拼接不一致测量数据，不赋三网标签。
 
-### BestCF 镜像/聚合
+## 启用：CMLiussss（1 个提供方、3 个分类适配器）
 
-https://github.com/DustinWin/BestCF 、https://github.com/joname1/BestCFip 。检查其公开 README / 仓库信息。它们是上游结果的聚合/转引，不是新增独立测点。DustinWin 的来源链包括 IPDB、CMLiussss、Wetest 等；聚合项目自身的授权不能消除原数据限制，因此不用它们为未知授权源提供后门。本次无需镜像回退，避免重复计为独立验证。
+- 提供方及接口/免责声明：https://cf.090227.xyz/
+- 实际入口：https://cf.090227.xyz/cmcc 、https://cf.090227.xyz/cu 、https://cf.090227.xyz/ct
 
-### byoip.top
+首页公开 API 区明确展示接口及配置复用方式。免责声明称仅供参考、不保证准确完整及时、禁止非法用途。此次三个入口普通 GET 均为 200；8/4/6 行是小型 IP#标签名单，不是采集网站全表。没有发现独立的数据开放许可证或禁止该有限事实使用的条款；采用与上述相同的有限、署名、低频事实复用决定，保留授权未知，不借用其他 cmliu 项目的 Apache-2.0 代码许可证。
 
-https://byoip.top/ 本次直接访问 403；这是动态域名候选而非保证可输出的数值 IP 池。未建立数据再分发许可；不启用、不枚举通配符、不把任意 *. 域名当地址。即使解析为 AS13335，也未必在本项目允许的 CF 标准边缘网段内。
+响应只证明提供方的分类，不证明当前国内运营商测点或独立测量链。carrier_claim 保留 cmcc/cu/ct，carrier_verified=false，输出类别仍为 general；无指标/时间/测点就保持未知。当前 CT 两条 188.164.248.18、188.164.248.143 不在官方标准 CF 网段，必须剔除。Homepage 外部延迟图或资源链接不能证明 IP API 的原始测量来源；这三个分类不是三家独立提供方。
+
+## 未启用及具体原因
+
+### Wetest：明确限制和授权门禁，不采集
+
+条款：https://www.wetest.vip/page/site/terms.html
+
+API 文档：https://www.wetest.vip/page/api/get_cloudflare_ip.html
+
+本轮两页均 200。条款第 2 节禁止自动化大量获取，例外仅为遵守限制的官方 API；第 3 节主张数据汇编等权利。API 文档要求通讯授权 key，示例不是本项目授权，且未明确允许向公开 GitHub 仓库再分发。本项目不调用数据列表/API，不使用文档示例 key，也不通过镜像绕过。
+
+如未来确需该来源，待人工发送的精确问题（本次未发送）：
+“能否允许 cf-preferred-aggregate 使用贵方正式授权 API，每小时最多一次抓取 Cloudflare v4/v6 优选结果，并将最小 IP、原始指标、测量时间及来源署名发布到公开 GitHub 仓库，供下游下载？若允许，请明确可公开字段、数量/频率、署名、再分发条件及授权取得方式。”
+此许可不是当前三提供方聚合的必需门禁。
+
+### BestCF / joname：不增设聚合转发路线
+
+https://github.com/DustinWin/BestCF/blob/main/.github/workflows/build.yml
+
+https://github.com/joname1/BestCFip/blob/main/collects.py
+
+当前 DustinWin 工作流组合 VPS789、IPDB v4/v6、cf-speed-dns，限量抽取后加来源标签；不能把旧报告所写的 CMLiussss/Wetest 当其当前直接输入。joname 来源更广，含 Wetest，且去重/排序可能损失原顺序或归因。二者不是独立测量提供方。无根 LICENSE 本身并非事实地址不可引用的证明；此处不接入的理由是已可直取合适来源、转发重复和来源限制/归因损失，不是要求每个事实都必须 MIT。没有用聚合路线获取受限 Wetest 数据。
+
+### byoip.top：域名通道，不是数值实测池
+
+https://byoip.top/ 此轮无重定向自动跟随 GET 遇到重定向（并非旧报告的当前 403 结论）。域名可作为另行评估的可选动态域名通道，本任务未实现，不枚举通配符、不把 DNS 解析或 AS13335 归属当优选测量。不为增加来源数量加入域名或中转池。
 
 ### CloudflareYes
 
-不启用。既有观察中 IPv6 三网存在同地址、指标、时间与 NETCUP 节点重复，不能作为三份国内 ISP 证据。没有可信的独立三网来源时保持三网 TXT 为空；不把 general 静默填充进去。
+未启用。已有 IPv6 跨运营商同地址/指标/时间与 NETCUP 重复观察，不足以建立独立国内三网归因；本任务没有把它重新计作三网测量提供方。
 
-## CF 官方网段
+## 计数和范围边界
 
-https://www.cloudflare.com/ips-v4 、https://www.cloudflare.com/ips-v6 仅作为官方标准边缘范围校验依据，不把其中的所有地址枚举成“优选”。保存当轮网络段以便审计；每次新发布必须真实获取，不缓存无限延期。
+默认配置 3 个原始提供方、6 个适配器；提供方并不等于经独立核验的测量基础设施。两个 IPDB 地址族及 CML 三类均不可膨胀为独立测点数，额外来源仍可能共享未公开的更上游。逐条 provenance 保留 provider_id、source_id、origin、endpoint_url、rank、指标及未知项；重合仅算一个地址+端口，不用跨测点指标排序。
+
+https://www.cloudflare.com/ips-v4 和 https://www.cloudflare.com/ips-v6 每轮真实获取，仅作官方标准边缘范围校验，不枚举网段造优选。新上游限制或授权变化应人工复核，网络可达性不自动决定权利；IPDB LICENSE 变化有运行时 fail-closed，其余网页条款没有自动语义监控，仍需人工定期复查。

@@ -26,6 +26,49 @@ def parse_csv(text):
     return rows
 
 
+def parse_ip_list(text, separator='lines', claim='general', limit=20):
+    """Strict minimal factual feed, never regex-extract addresses from HTML."""
+    tokens = text.replace('\r','\n').replace('\n',',').split(',') if separator=='comma' else text.strip().splitlines()
+    tokens = [t.strip() for t in tokens if t.strip()]
+    if not tokens or len(tokens)>limit:
+        raise ValueError('empty or oversized preferred feed')
+    rows=[]
+    for rank, token in enumerate(tokens,1):
+        address, sep, label=token.partition('#')
+        address=address.strip()
+        if '%' in address:
+            raise ValueError('scoped address rejected')
+        ipaddress.ip_address(address)  # Fail closed on HTML, domains and ports.
+        rows.append(dict(address=address,port=None,rank=rank,carrier_claim=claim,
+            carrier_verified=False,measurement_time=None,probe_viewpoint=None,
+            metrics={},upstream_label=label.strip() if sep else None))
+    return rows
+
+
+def select_ipdb(csv_text, shortlist_text, family):
+    """Use upstream's explicit preferred file; CSV contributes metrics, not count."""
+    csv_rows=parse_csv(csv_text)
+    by_address={}
+    for row in csv_rows:
+        try: key=str(ipaddress.ip_address(row['address']))
+        except ValueError: continue
+        by_address.setdefault(key,[]).append(row)
+    selected=parse_ip_list(shortlist_text,limit=20)
+    result=[];seen=set()
+    for row in selected:
+        ip=ipaddress.ip_address(row['address']);key=str(ip)
+        if ip.version!=family or key in seen or key not in by_address:
+            raise ValueError('shortlist inconsistent with CSV')
+        seen.add(key)
+        matches=by_address[key];original=matches[0]
+        if any(m['metrics']!=original['metrics'] for m in matches[1:]):
+            raise ValueError('conflicting CSV measurements for preferred address')
+        result.append({**original,'address':key,'csv_rank':original['rank'],
+                       'csv_ranks':[m['rank'] for m in matches],'rank':row['rank'],
+                       'selection':'upstream explicit bestcf shortlist'})
+    return result
+
+
 def parse_ranges(text, family):
     nets = [ipaddress.ip_network(s.strip(), strict=True) for s in text.splitlines() if s.strip()]
     if not nets or len(nets)>100 or any(n.version!=family or not n.is_global or n.prefixlen < (8 if family==4 else 16) for n in nets):

@@ -17,6 +17,9 @@ def fetcher(narrow=False,fail=False,scoped=False):
         if fail:raise TimeoutError('synthetic outage')
         if '/commits/main' in url:return json.dumps({'sha':'a'*40,'commit':{'committer':{'date':fixtures.NOW}}})
         if url.endswith('/LICENSE'):return pipeline.IPDB_LICENSE
+        if url.endswith('bestcfv4.txt'): return '104.16.0.1\n104.20.0.1\n'
+        if url.endswith('bestcfv6.txt'): return '2606:4700::1\n'
+        if 'ipTop10.html' in url or 'cf.090227.xyz/' in url: raise TimeoutError('synthetic unavailable extra feed')
         ips=['104.16.0.1','104.20.0.1'] if url.endswith('ipv4.csv') else ['2606:4700::1%eth0' if scoped else '2606:4700::1']
         return HEADER+''.join(ip+',4,4,0,10,20\n' for ip in ips)
     return fetch
