@@ -1,6 +1,6 @@
 {
   "adapter_count": 6,
-  "attempted_at": "2026-11-03T15:21:47Z",
+  "attempted_at": "2026-11-03T21:10:44Z",
   "candidate_counts": {
     "all-v4": 29,
     "all-v6": 41
@@ -15,7 +15,7 @@
     "version": "source-claimed-v1"
   },
   "cloudflare_ranges": {
-    "fetched_at": "2026-11-03T15:21:47Z",
+    "fetched_at": "2026-11-03T21:10:44Z",
     "networks": {
       "4": [
         "173.245.48.0/20",
@@ -47,7 +47,7 @@
     "state": "fresh"
   },
   "collection_ok": true,
-  "completed_at": "2026-11-03T15:21:50Z",
+  "completed_at": "2026-11-03T21:10:47Z",
   "contributing_provider_count": 3,
   "counts": {
     "all-v4": 29,
@@ -61,8 +61,8 @@
     "general-v4": 13,
     "general-v6": 0
   },
-  "dataset_generated_at": "2026-11-03T15:21:50Z",
-  "dataset_valid_until": "2026-11-04T15:21:48Z",
+  "dataset_generated_at": "2026-11-03T21:10:47Z",
+  "dataset_valid_until": "2026-11-04T21:10:45Z",
   "excluded_records": 41,
   "exclusion_reasons": {
     "invalid_packet_evidence": 41,
@@ -71,25 +71,25 @@
     "zero_speed": 41
   },
   "file_sha256": {
-    "all-v4.txt": "5f3b06dd568604c75ca9188ae881a9e336e7c03d0c67b626835f373d59726aae",
+    "all-v4.txt": "25cdbf6ddc784f34d2d610d58a7a4e63e8d9f9feb7fcaa955d3d9004ad978a6a",
     "all-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "candidates-v4.txt": "5f3b06dd568604c75ca9188ae881a9e336e7c03d0c67b626835f373d59726aae",
+    "candidates-v4.txt": "25cdbf6ddc784f34d2d610d58a7a4e63e8d9f9feb7fcaa955d3d9004ad978a6a",
     "candidates-v6.txt": "757888dd7e7d1757fe9ecba1811a10e178ae087cfe7bb1ebe502b228f0810fc2",
-    "candidates.json": "7c2c05a2eb2d73b3ee4fa9551cc37e96a39716db57955db794db65d8c6963dbd",
+    "candidates.json": "49764428b5c470f373a90be490074767c565f5e7bb88dbf72ab27847b9cadf09",
     "cmcc-v4.txt": "2cd76fbdc91926ab72daebfdb1fa9e1e54ff0216f3bdd6aa33d95f9ae8862431",
     "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ct-v4.txt": "742a39b7837037615bca71ae54e3788bfe02f87c4ad23ee366ddf71b7bdb6016",
     "ct-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cu-v4.txt": "9123c1d345940ab2fab414290393be0e2c251d4277a3900d1838a2bccff52622",
     "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "general-v4.txt": "f7461dd88d03c8180074847dee055e8cc5a639a1f7a4d4c7a61c7e3aa7427b02",
+    "general-v4.txt": "78813db7bbc473cc291b1eea505917eb57e617af3dfd52856614e3220e845688",
     "general-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "last-good-candidates.json": "7c2c05a2eb2d73b3ee4fa9551cc37e96a39716db57955db794db65d8c6963dbd",
+    "last-good-candidates.json": "49764428b5c470f373a90be490074767c565f5e7bb88dbf72ab27847b9cadf09",
     "policy.json": "7352a7c944030c92ff0c6497634b4d6ac45b65e0722a41beaab10417cf15bf91",
-    "recommended-v4.txt": "5f3b06dd568604c75ca9188ae881a9e336e7c03d0c67b626835f373d59726aae",
+    "recommended-v4.txt": "25cdbf6ddc784f34d2d610d58a7a4e63e8d9f9feb7fcaa955d3d9004ad978a6a",
     "recommended-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "records.json": "b780bdfb083615e0904b925898939b0c0e669fde97c4be7ef552b55111ae606c",
-    "sources.json": "2b7d8649599c27fca43f709a5bcfcb193eb0be222dee6a0b93e6737d44d49eea"
+    "records.json": "8c7a59e620efbd1d4a29dcf086d57809670fe0b1a630f4ca8cedea2f6f96fbce",
+    "sources.json": "7fcc95ba2efee8ad0238915a6ccb073eab2db63e33891981031ec9484ab80448"
   },
   "fresh_provider_count": 3,
   "independently_verified_records": 0,
@@ -113,18 +113,18 @@
     "unknown_speed": 19
   },
   "recommendation_state": "upstream-preferred",
-  "recommendation_valid_until": "2026-11-04T15:21:48Z",
+  "recommendation_valid_until": "2026-11-04T21:10:45Z",
   "recommended_provider_count": 3,
   "schema_version": 3,
   "sources": {
     "cf-speed-dns-v4": {
       "accepted_rows": 3,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "general",
       "default_eligible_records": 3,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-03T15:21:49Z",
+      "fetched_at": "2026-11-03T21:10:46Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 3,
       "kind": "published_preferred_shortlist",
@@ -155,12 +155,12 @@
     },
     "cmliussss-cmcc": {
       "accepted_rows": 8,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "cmcc",
       "default_eligible_records": 8,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-03T15:21:50Z",
+      "fetched_at": "2026-11-03T21:10:47Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -191,12 +191,12 @@
     },
     "cmliussss-ct": {
       "accepted_rows": 4,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "ct",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-03T15:21:50Z",
+      "fetched_at": "2026-11-03T21:10:47Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",
@@ -227,12 +227,12 @@
     },
     "cmliussss-cu": {
       "accepted_rows": 4,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "cu",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-03T15:21:50Z",
+      "fetched_at": "2026-11-03T21:10:47Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -263,12 +263,12 @@
     },
     "ipdb-v4": {
       "accepted_rows": 10,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "general",
       "default_eligible_records": 10,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-03T15:21:48Z",
+      "fetched_at": "2026-11-03T21:10:45Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
@@ -304,7 +304,7 @@
     },
     "ipdb-v6": {
       "accepted_rows": 41,
-      "attempted_at": "2026-11-03T15:21:47Z",
+      "attempted_at": "2026-11-03T21:10:44Z",
       "carrier": "general",
       "default_eligible_records": 0,
       "exclusion_reasons": {
@@ -313,7 +313,7 @@
         "zero_speed": 41
       },
       "family": 6,
-      "fetched_at": "2026-11-03T15:21:49Z",
+      "fetched_at": "2026-11-03T21:10:46Z",
       "id": "ipdb-v6",
       "input_rows": 41,
       "kind": "published_metric_table_with_shortlist",
