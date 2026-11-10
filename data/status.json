@@ -1,9 +1,9 @@
 {
   "adapter_count": 6,
-  "attempted_at": "2026-11-10T10:04:32Z",
+  "attempted_at": "2026-11-10T17:58:50Z",
   "candidate_counts": {
     "all-v4": 30,
-    "all-v6": 2
+    "all-v6": 3
   },
   "candidate_usable": true,
   "carrier_export_policy": {
@@ -15,7 +15,7 @@
     "version": "source-claimed-v1"
   },
   "cloudflare_ranges": {
-    "fetched_at": "2026-11-10T10:04:33Z",
+    "fetched_at": "2026-11-10T17:58:50Z",
     "networks": {
       "4": [
         "173.245.48.0/20",
@@ -47,7 +47,7 @@
     "state": "fresh"
   },
   "collection_ok": true,
-  "completed_at": "2026-11-10T10:04:35Z",
+  "completed_at": "2026-11-10T17:58:51Z",
   "contributing_provider_count": 3,
   "counts": {
     "all-v4": 30,
@@ -61,39 +61,39 @@
     "general-v4": 14,
     "general-v6": 0
   },
-  "dataset_generated_at": "2026-11-10T10:04:35Z",
-  "dataset_valid_until": "2026-11-11T10:04:33Z",
-  "excluded_records": 2,
+  "dataset_generated_at": "2026-11-10T17:58:51Z",
+  "dataset_valid_until": "2026-11-11T17:58:50Z",
+  "excluded_records": 3,
   "exclusion_reasons": {
-    "invalid_packet_evidence": 2,
-    "positive_loss": 2
+    "invalid_packet_evidence": 3,
+    "positive_loss": 3
   },
   "file_sha256": {
-    "all-v4.txt": "709fcb40497165803c542b6875ba6e071f119dd1c748d1cb1b1890a7769f7555",
+    "all-v4.txt": "4117306bfdf179c7ed48d1b997da3753813c4b66e232189b6c838c09c2d9b2b8",
     "all-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "candidates-v4.txt": "709fcb40497165803c542b6875ba6e071f119dd1c748d1cb1b1890a7769f7555",
-    "candidates-v6.txt": "d9a4736c9698d61498c71a73c866d81b4d4f540e274f5522f66fba7c10bc5629",
-    "candidates.json": "88b4e63dc661c711f56a5ff0a9780937c395c8d1b4641dcc99a5d287161a6c8f",
+    "candidates-v4.txt": "4117306bfdf179c7ed48d1b997da3753813c4b66e232189b6c838c09c2d9b2b8",
+    "candidates-v6.txt": "ab02afc77a5da2ba0202fc48917b8671cf4b43fc3d14f55f64681b048ed8c83f",
+    "candidates.json": "d961dacb1d3d4936cde869ace8e8c82b6cc8329b7b6ad2dd092c3920b610a3d6",
     "cmcc-v4.txt": "2cd76fbdc91926ab72daebfdb1fa9e1e54ff0216f3bdd6aa33d95f9ae8862431",
     "cmcc-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ct-v4.txt": "742a39b7837037615bca71ae54e3788bfe02f87c4ad23ee366ddf71b7bdb6016",
     "ct-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "cu-v4.txt": "9123c1d345940ab2fab414290393be0e2c251d4277a3900d1838a2bccff52622",
     "cu-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "general-v4.txt": "1136119aa8c890c64197a2253c4ca644f0d74aa25a4df50a27a9dccf945a32c4",
+    "general-v4.txt": "2f58d23dc30faccfdc3303a154633e1a8e07cace8c8aa2e388ed3a29f6910b4b",
     "general-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "last-good-candidates.json": "88b4e63dc661c711f56a5ff0a9780937c395c8d1b4641dcc99a5d287161a6c8f",
+    "last-good-candidates.json": "d961dacb1d3d4936cde869ace8e8c82b6cc8329b7b6ad2dd092c3920b610a3d6",
     "policy.json": "7352a7c944030c92ff0c6497634b4d6ac45b65e0722a41beaab10417cf15bf91",
-    "recommended-v4.txt": "709fcb40497165803c542b6875ba6e071f119dd1c748d1cb1b1890a7769f7555",
+    "recommended-v4.txt": "4117306bfdf179c7ed48d1b997da3753813c4b66e232189b6c838c09c2d9b2b8",
     "recommended-v6.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "records.json": "d34b44da65b74d30116e8c8b0abf7b6e4ec342323d48d3e6547e7af15698906b",
-    "sources.json": "911ca7232f9530f7440fc670168801c89439ce746740267d3ab08eb53c822117"
+    "records.json": "99c7ed566e42113af53ba96356c9c22f61fcab5f0fde270033d07558614a232e",
+    "sources.json": "4ce3279f4a684e88a2656732b80c1d4f04f8654a6bc1283d472ed4d96b1bb818"
   },
   "fresh_provider_count": 3,
   "independently_verified_records": 0,
   "observation_exclusion_reasons": {
-    "invalid_packet_evidence": 2,
-    "positive_loss": 2
+    "invalid_packet_evidence": 3,
+    "positive_loss": 3
   },
   "policy_version": "upstream-preferred-v1",
   "provider_count": 3,
@@ -102,25 +102,25 @@
   "quality_warnings": {
     "unknown_latency": 20,
     "unknown_loss": 20,
-    "unknown_measurement_time": 32,
-    "unknown_probe_viewpoint": 32,
+    "unknown_measurement_time": 33,
+    "unknown_probe_viewpoint": 33,
     "unknown_received": 20,
     "unknown_sent": 20,
     "unknown_speed": 20
   },
   "recommendation_state": "upstream-preferred",
-  "recommendation_valid_until": "2026-11-11T10:04:33Z",
+  "recommendation_valid_until": "2026-11-11T17:58:50Z",
   "recommended_provider_count": 3,
   "schema_version": 3,
   "sources": {
     "cf-speed-dns-v4": {
       "accepted_rows": 4,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "general",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-10T10:04:34Z",
+      "fetched_at": "2026-11-10T17:58:51Z",
       "id": "cf-speed-dns-v4",
       "input_rows": 4,
       "kind": "published_preferred_shortlist",
@@ -151,12 +151,12 @@
     },
     "cmliussss-cmcc": {
       "accepted_rows": 8,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "cmcc",
       "default_eligible_records": 8,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-10T10:04:34Z",
+      "fetched_at": "2026-11-10T17:58:51Z",
       "id": "cmliussss-cmcc",
       "input_rows": 8,
       "kind": "provider_labelled_candidates",
@@ -187,12 +187,12 @@
     },
     "cmliussss-ct": {
       "accepted_rows": 4,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "ct",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-10T10:04:35Z",
+      "fetched_at": "2026-11-10T17:58:51Z",
       "id": "cmliussss-ct",
       "input_rows": 6,
       "kind": "provider_labelled_candidates",
@@ -223,12 +223,12 @@
     },
     "cmliussss-cu": {
       "accepted_rows": 4,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "cu",
       "default_eligible_records": 4,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-10T10:04:34Z",
+      "fetched_at": "2026-11-10T17:58:51Z",
       "id": "cmliussss-cu",
       "input_rows": 4,
       "kind": "provider_labelled_candidates",
@@ -259,17 +259,17 @@
     },
     "ipdb-v4": {
       "accepted_rows": 10,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "general",
       "default_eligible_records": 10,
       "exclusion_reasons": {},
       "family": 4,
-      "fetched_at": "2026-11-10T10:04:33Z",
+      "fetched_at": "2026-11-10T17:58:50Z",
       "id": "ipdb-v4",
       "input_rows": 10,
       "kind": "published_metric_table_with_shortlist",
       "measurement_time": null,
-      "metrics_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/24fe1966fc39169f2f60c21eb28b3bedf2e27d75/BestCF/ipv4.csv",
+      "metrics_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf/BestCF/ipv4.csv",
       "origin": "https://github.com/ymyuuu/IPDB",
       "parser": "ipdb",
       "path": "BestCF/ipv4.csv",
@@ -289,38 +289,38 @@
       },
       "recommended_observations": 10,
       "rejected_rows": 0,
-      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/24fe1966fc39169f2f60c21eb28b3bedf2e27d75/BestCF/bestcfv4.txt",
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf/BestCF/bestcfv4.txt",
       "selection_policy": "full CSV with same-revision shortlist annotation v2",
       "shortlist_path": "BestCF/bestcfv4.txt",
-      "source_published_at": "2026-11-10T09:05:12Z",
-      "source_revision": "24fe1966fc39169f2f60c21eb28b3bedf2e27d75",
+      "source_published_at": "2026-11-10T17:27:55Z",
+      "source_revision": "037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf",
       "state": "fresh",
       "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
       "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/bestcfv4.txt"
     },
     "ipdb-v6": {
-      "accepted_rows": 2,
-      "attempted_at": "2026-11-10T10:04:32Z",
+      "accepted_rows": 3,
+      "attempted_at": "2026-11-10T17:58:50Z",
       "carrier": "general",
       "default_eligible_records": 0,
       "exclusion_reasons": {
-        "invalid_packet_evidence": 2,
-        "positive_loss": 2
+        "invalid_packet_evidence": 3,
+        "positive_loss": 3
       },
       "family": 6,
-      "fetched_at": "2026-11-10T10:04:34Z",
+      "fetched_at": "2026-11-10T17:58:51Z",
       "id": "ipdb-v6",
-      "input_rows": 2,
+      "input_rows": 3,
       "kind": "published_metric_table_with_shortlist",
       "measurement_time": null,
-      "metrics_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/24fe1966fc39169f2f60c21eb28b3bedf2e27d75/BestCF/ipv6.csv",
+      "metrics_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf/BestCF/ipv6.csv",
       "origin": "https://github.com/ymyuuu/IPDB",
       "parser": "ipdb",
       "path": "BestCF/ipv6.csv",
-      "preferred_rows": 2,
+      "preferred_rows": 3,
       "provider_id": "ipdb",
       "quality_summary": {
-        "nonzero_loss_rows": 2,
+        "nonzero_loss_rows": 3,
         "policy": "descriptive candidate counts; default gated by upstream-preferred-v1",
         "scope": "validated collected candidates",
         "unknown_download_rows": 0,
@@ -328,16 +328,16 @@
         "zero_download_rows": 0
       },
       "quality_warnings": {
-        "unknown_measurement_time": 2,
-        "unknown_probe_viewpoint": 2
+        "unknown_measurement_time": 3,
+        "unknown_probe_viewpoint": 3
       },
       "recommended_observations": 0,
       "rejected_rows": 0,
-      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/24fe1966fc39169f2f60c21eb28b3bedf2e27d75/BestCF/bestcfv6.txt",
+      "resolved_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf/BestCF/bestcfv6.txt",
       "selection_policy": "full CSV with same-revision shortlist annotation v2",
       "shortlist_path": "BestCF/bestcfv6.txt",
-      "source_published_at": "2026-11-10T09:05:12Z",
-      "source_revision": "24fe1966fc39169f2f60c21eb28b3bedf2e27d75",
+      "source_published_at": "2026-11-10T17:27:55Z",
+      "source_revision": "037a9f232bd27d6b70cf8ddf347c6a1aec1c2aaf",
       "state": "fresh",
       "terms_decision": "repository MIT with original notice; underlying data rights not warranted",
       "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/bestcfv6.txt"
