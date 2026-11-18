@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-18T14:20:14Z",
+  "generated_at": "2026-11-18T22:10:37Z",
   "ordering": "catalogue round-robin; original source ranks",
   "policy_version": "upstream-preferred-v1",
   "records": [
     {
-      "address": "172.67.76.209",
+      "address": "104.20.53.193",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -15,21 +15,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "172.67.76.209",
+          "address": "104.20.53.193",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 1,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "12.92"
+              "value": "34.05"
             },
             "latency": {
               "unit": null,
-              "value": "204.44"
+              "value": "163.24"
             },
             "loss": {
               "unit": "ratio",
@@ -61,7 +61,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 1,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -78,81 +78,7 @@
       }
     },
     {
-      "address": "2606:4700:0:4e72:feef:2eee:2454:ded9",
-      "carrier_claim_sources": {},
-      "carrier_claims": [],
-      "carrier_conflict": false,
-      "carrier_grouping": "source-claimed/unverified",
-      "carrier_verified": false,
-      "category": "general",
-      "family": 6,
-      "port": null,
-      "provenance": [
-        {
-          "address": "2606:4700:0:4e72:feef:2eee:2454:ded9",
-          "carrier_claim": "general",
-          "carrier_verified": false,
-          "csv_rank": 1,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
-          "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "10.73"
-            },
-            "latency": {
-              "unit": null,
-              "value": "207.63"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
-          "port": null,
-          "probe_viewpoint": null,
-          "provider_id": "ipdb",
-          "quality": {
-            "eligible": true,
-            "level": "upstream-preferred/unverified",
-            "reasons": [],
-            "warnings": [
-              "unknown_measurement_time",
-              "unknown_probe_viewpoint"
-            ]
-          },
-          "rank": 1,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 1,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
-          "upstream_preferred": true
-        }
-      ],
-      "quality": {
-        "authenticated_proxy_health": "not tested",
-        "eligible": true,
-        "level": "upstream-preferred/unverified",
-        "policy_version": "upstream-preferred-v1",
-        "reasons": [],
-        "warnings": [
-          "unknown_measurement_time",
-          "unknown_probe_viewpoint"
-        ]
-      }
-    },
-    {
-      "address": "172.64.229.159",
+      "address": "172.64.229.114",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -163,11 +89,11 @@
       "port": null,
       "provenance": [
         {
-          "address": "172.64.229.159",
+          "address": "172.64.229.114",
           "carrier_claim": "general",
           "carrier_verified": false,
           "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
@@ -234,7 +160,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -301,7 +227,7 @@
           "carrier_claim": "cu",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cu",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -368,7 +294,7 @@
           "carrier_claim": "ct",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/ct",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -414,7 +340,7 @@
       }
     },
     {
-      "address": "104.18.86.87",
+      "address": "104.20.48.128",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -425,21 +351,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.18.86.87",
+          "address": "104.20.48.128",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 2,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "7.03"
+              "value": "32.70"
             },
             "latency": {
               "unit": null,
-              "value": "215.93"
+              "value": "186.93"
             },
             "loss": {
               "unit": "ratio",
@@ -471,7 +397,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 2,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -488,64 +414,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e46:5c0b:d4fe:ef9:a17e",
+      "address": "172.64.229.159",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e46:5c0b:d4fe:ef9:a17e",
+          "address": "172.64.229.159",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 2,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "9.65"
-            },
-            "latency": {
-              "unit": null,
-              "value": "208.50"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 2,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 2,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -556,8 +464,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -583,7 +496,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -650,7 +563,7 @@
           "carrier_claim": "cu",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cu",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -717,7 +630,7 @@
           "carrier_claim": "ct",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/ct",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -763,7 +676,7 @@
       }
     },
     {
-      "address": "104.20.53.162",
+      "address": "162.159.160.137",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -774,21 +687,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.20.53.162",
+          "address": "162.159.160.137",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 3,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "6.49"
+              "value": "29.02"
             },
             "latency": {
               "unit": null,
-              "value": "159.34"
+              "value": "178.85"
             },
             "loss": {
               "unit": "ratio",
@@ -820,7 +733,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 3,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -837,64 +750,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e46:5c0b:d414:af86:5c4c",
+      "address": "172.64.229.71",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e46:5c0b:d414:af86:5c4c",
+          "address": "172.64.229.71",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 3,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "4.19"
-            },
-            "latency": {
-              "unit": null,
-              "value": "208.48"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 3,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 3,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -905,8 +800,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -932,7 +832,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -999,7 +899,7 @@
           "carrier_claim": "cu",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cu",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1066,7 +966,7 @@
           "carrier_claim": "ct",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/ct",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1112,7 +1012,7 @@
       }
     },
     {
-      "address": "104.20.54.106",
+      "address": "104.20.63.84",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -1123,21 +1023,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.20.54.106",
+          "address": "104.20.63.84",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 4,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "3.51"
+              "value": "25.27"
             },
             "latency": {
               "unit": null,
-              "value": "156.49"
+              "value": "154.08"
             },
             "loss": {
               "unit": "ratio",
@@ -1169,7 +1069,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 4,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -1186,64 +1086,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e46:ed13:beb6:9b12:2cd9",
+      "address": "172.64.229.160",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e46:ed13:beb6:9b12:2cd9",
+          "address": "172.64.229.160",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 4,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "3.56"
-            },
-            "latency": {
-              "unit": null,
-              "value": "206.99"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 4,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 4,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -1254,8 +1136,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -1281,7 +1168,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1348,7 +1235,7 @@
           "carrier_claim": "cu",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cu",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1415,7 +1302,7 @@
           "carrier_claim": "ct",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/ct",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1461,7 +1348,7 @@
       }
     },
     {
-      "address": "172.64.190.68",
+      "address": "104.21.93.169",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -1472,21 +1359,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "172.64.190.68",
+          "address": "104.21.93.169",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 5,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "3.32"
+              "value": "17.22"
             },
             "latency": {
               "unit": null,
-              "value": "209.48"
+              "value": "60.37"
             },
             "loss": {
               "unit": "ratio",
@@ -1518,7 +1405,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 5,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -1535,64 +1422,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e72:fec2:132f:1ba1:185e",
+      "address": "172.64.229.86",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e72:fec2:132f:1ba1:185e",
+          "address": "172.64.229.86",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 5,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "3.51"
-            },
-            "latency": {
-              "unit": null,
-              "value": "207.50"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 5,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 5,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -1603,8 +1472,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -1630,7 +1504,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1676,7 +1550,7 @@
       }
     },
     {
-      "address": "104.18.19.219",
+      "address": "104.21.89.164",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -1687,21 +1561,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.18.19.219",
+          "address": "104.21.89.164",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 6,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "3.07"
+              "value": "15.38"
             },
             "latency": {
               "unit": null,
-              "value": "214.27"
+              "value": "59.08"
             },
             "loss": {
               "unit": "ratio",
@@ -1733,7 +1607,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 6,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -1750,64 +1624,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e46:edab:5d2f:b9a1:ef3c",
+      "address": "172.64.229.79",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e46:edab:5d2f:b9a1:ef3c",
+          "address": "172.64.229.79",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 6,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "3.19"
-            },
-            "latency": {
-              "unit": null,
-              "value": "209.32"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 6,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 6,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -1818,8 +1674,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -1845,7 +1706,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -1891,7 +1752,7 @@
       }
     },
     {
-      "address": "172.67.70.241",
+      "address": "104.21.82.214",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -1902,21 +1763,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "172.67.70.241",
+          "address": "104.21.82.214",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 7,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "2.92"
+              "value": "3.26"
             },
             "latency": {
               "unit": null,
-              "value": "203.56"
+              "value": "59.93"
             },
             "loss": {
               "unit": "ratio",
@@ -1948,7 +1809,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 7,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -1965,64 +1826,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e72:fec2:132f:f140:5a38",
+      "address": "172.64.229.144",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e72:fec2:132f:f140:5a38",
+          "address": "172.64.229.144",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 7,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "2.22"
-            },
-            "latency": {
-              "unit": null,
-              "value": "208.71"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 7,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 7,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -2033,8 +1876,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -2060,7 +1908,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -2106,7 +1954,7 @@
       }
     },
     {
-      "address": "172.67.68.9",
+      "address": "104.25.243.80",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -2117,21 +1965,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "172.67.68.9",
+          "address": "104.25.243.80",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 8,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "1.92"
+              "value": "2.57"
             },
             "latency": {
               "unit": null,
-              "value": "203.55"
+              "value": "57.97"
             },
             "loss": {
               "unit": "ratio",
@@ -2163,7 +2011,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 8,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -2180,64 +2028,46 @@
       }
     },
     {
-      "address": "2606:4700:0:4e72:fec2:b6a4:6849:9a45",
+      "address": "172.64.150.30",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
       "carrier_grouping": "source-claimed/unverified",
       "carrier_verified": false,
       "category": "general",
-      "family": 6,
+      "family": 4,
       "port": null,
       "provenance": [
         {
-          "address": "2606:4700:0:4e72:fec2:b6a4:6849:9a45",
+          "address": "172.64.150.30",
           "carrier_claim": "general",
           "carrier_verified": false,
-          "csv_rank": 8,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv6.txt",
-          "fetched_at": "2026-11-18T14:20:13Z",
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
-          "metrics": {
-            "download_speed": {
-              "unit": "MB/s",
-              "value": "1.89"
-            },
-            "latency": {
-              "unit": null,
-              "value": "209.39"
-            },
-            "loss": {
-              "unit": "ratio",
-              "value": "0.00"
-            },
-            "received": {
-              "unit": "packets",
-              "value": "4"
-            },
-            "sent": {
-              "unit": "packets",
-              "value": "4"
-            }
-          },
-          "origin": "https://github.com/ymyuuu/IPDB",
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
           "port": null,
           "probe_viewpoint": null,
-          "provider_id": "ipdb",
+          "provider_id": "cf-speed-dns",
           "quality": {
             "eligible": true,
             "level": "upstream-preferred/unverified",
             "reasons": [],
             "warnings": [
+              "unknown_latency",
+              "unknown_loss",
               "unknown_measurement_time",
-              "unknown_probe_viewpoint"
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
             ]
           },
           "rank": 8,
-          "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
-          "shortlist_rank": 8,
-          "source_id": "ipdb-v6",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
           "upstream_preferred": true
         }
       ],
@@ -2248,8 +2078,13 @@
         "policy_version": "upstream-preferred-v1",
         "reasons": [],
         "warnings": [
+          "unknown_latency",
+          "unknown_loss",
           "unknown_measurement_time",
-          "unknown_probe_viewpoint"
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
         ]
       }
     },
@@ -2275,7 +2110,7 @@
           "carrier_claim": "cmcc",
           "carrier_verified": false,
           "endpoint_url": "https://cf.090227.xyz/cmcc",
-          "fetched_at": "2026-11-18T14:20:14Z",
+          "fetched_at": "2026-11-18T22:10:37Z",
           "measurement_time": null,
           "metrics": {},
           "origin": "https://cf.090227.xyz/",
@@ -2321,7 +2156,7 @@
       }
     },
     {
-      "address": "104.17.239.187",
+      "address": "104.21.95.120",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -2332,21 +2167,21 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.17.239.187",
+          "address": "104.21.95.120",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 9,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "1.83"
+              "value": "1.73"
             },
             "latency": {
               "unit": null,
-              "value": "204.61"
+              "value": "58.93"
             },
             "loss": {
               "unit": "ratio",
@@ -2378,7 +2213,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 9,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -2395,7 +2230,7 @@
       }
     },
     {
-      "address": "104.18.27.34",
+      "address": "104.18.46.52",
       "carrier_claim_sources": {},
       "carrier_claims": [],
       "carrier_conflict": false,
@@ -2406,21 +2241,82 @@
       "port": null,
       "provenance": [
         {
-          "address": "104.18.27.34",
+          "address": "104.18.46.52",
+          "carrier_claim": "general",
+          "carrier_verified": false,
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cf-speed-dns",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 9,
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
+    },
+    {
+      "address": "104.21.90.254",
+      "carrier_claim_sources": {},
+      "carrier_claims": [],
+      "carrier_conflict": false,
+      "carrier_grouping": "source-claimed/unverified",
+      "carrier_verified": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.21.90.254",
           "carrier_claim": "general",
           "carrier_verified": false,
           "csv_rank": 10,
-          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/9339fbd6a62950b78b440ae835a374d725f3f03b/BestCF/bestcfv4.txt",
-          "fetched_at": "2026-11-18T14:20:12Z",
+          "endpoint_url": "https://raw.githubusercontent.com/ymyuuu/IPDB/e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e/BestCF/bestcfv4.txt",
+          "fetched_at": "2026-11-18T22:10:36Z",
           "measurement_time": null,
           "metrics": {
             "download_speed": {
               "unit": "MB/s",
-              "value": "1.00"
+              "value": "1.39"
             },
             "latency": {
               "unit": null,
-              "value": "219.20"
+              "value": "60.61"
             },
             "loss": {
               "unit": "ratio",
@@ -2452,7 +2348,7 @@
           "selection": "published bestcf shortlist matched to CSV; other rows candidate only",
           "shortlist_rank": 10,
           "source_id": "ipdb-v4",
-          "source_revision": "9339fbd6a62950b78b440ae835a374d725f3f03b",
+          "source_revision": "e9aa2fef31dd6457b4b580f5f5fdc70750eccc4e",
           "upstream_preferred": true
         }
       ],
@@ -2467,8 +2363,69 @@
           "unknown_probe_viewpoint"
         ]
       }
+    },
+    {
+      "address": "104.18.37.144",
+      "carrier_claim_sources": {},
+      "carrier_claims": [],
+      "carrier_conflict": false,
+      "carrier_grouping": "source-claimed/unverified",
+      "carrier_verified": false,
+      "category": "general",
+      "family": 4,
+      "port": null,
+      "provenance": [
+        {
+          "address": "104.18.37.144",
+          "carrier_claim": "general",
+          "carrier_verified": false,
+          "endpoint_url": "https://ip.164746.xyz/ipTop10.html",
+          "fetched_at": "2026-11-18T22:10:36Z",
+          "measurement_time": null,
+          "metrics": {},
+          "origin": "https://github.com/ZhiXuanWang/cf-speed-dns",
+          "port": null,
+          "probe_viewpoint": null,
+          "provider_id": "cf-speed-dns",
+          "quality": {
+            "eligible": true,
+            "level": "upstream-preferred/unverified",
+            "reasons": [],
+            "warnings": [
+              "unknown_latency",
+              "unknown_loss",
+              "unknown_measurement_time",
+              "unknown_probe_viewpoint",
+              "unknown_received",
+              "unknown_sent",
+              "unknown_speed"
+            ]
+          },
+          "rank": 10,
+          "source_id": "cf-speed-dns-v4",
+          "source_revision": null,
+          "upstream_label": null,
+          "upstream_preferred": true
+        }
+      ],
+      "quality": {
+        "authenticated_proxy_health": "not tested",
+        "eligible": true,
+        "level": "upstream-preferred/unverified",
+        "policy_version": "upstream-preferred-v1",
+        "reasons": [],
+        "warnings": [
+          "unknown_latency",
+          "unknown_loss",
+          "unknown_measurement_time",
+          "unknown_probe_viewpoint",
+          "unknown_received",
+          "unknown_sent",
+          "unknown_speed"
+        ]
+      }
     }
   ],
   "schema_version": 3,
-  "valid_until": "2026-11-19T14:20:12Z"
+  "valid_until": "2026-11-19T22:10:36Z"
 }
